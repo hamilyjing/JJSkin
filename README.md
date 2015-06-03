@@ -41,7 +41,9 @@ JJSkin solves those problems.
 }
 ```
 
-* Second get or update object property (remember to import JJSkin.h).
+* Second pull JJSkin/JJSkin to your project and import "JJSkin.h".
+
+* Third get or update object property.
 
 ```objc
 /**
