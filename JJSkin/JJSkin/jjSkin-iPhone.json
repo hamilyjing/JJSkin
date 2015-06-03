@@ -1,0 +1,139 @@
+{
+    "portrait": {
+        "stringValue": "1234567890",
+        "intergerValue": "890",
+        "floatValue": "234.9",
+        "boolValue": "1",
+        "edgeInsets": "{1,2,3,4}",
+        "rect": "{{5,6},{7,8}}",
+        "size": "{9,0}",
+        "color": "#FFc58dd0",
+        
+        "button": {
+            "buttonType": "custom",
+            "titleNormal": "normal",
+            "titleDisable": "disable",
+            "titleHighlighted": "highlighted",
+            "titleSelected": "selected",
+            "titleColorNormal": "#FFFFFFFF",
+            "titleColorDisable": "#FF000000",
+            "titleColorHighlighted": "#FFAAAAAA",
+            "titleColorSelected": "#FFBBBBBB",
+            "imageNormal": "a.png",
+            "imageDisable": "b.png",
+            "imageHighlighted": "c.png",
+            "imageSelected": "d.png",
+            "bgImageNormal": "e.png",
+            "bgImageDisable": "f.png",
+            "bgImageHighlighted": "g.png",
+            "bgImageSelected": "h.png",
+            "contentInsets": "{1,2,3,4}",
+            "titleInsets": "{5,6,7,8}",
+            "imageInsets": "{9,0,1,2}",
+            
+            "labelStyle": {
+                "text": "labelStyle",
+                "textAlignment": "right",
+                "lineBreakMode": "clipping"
+            }
+        },
+        
+        "font": {
+            "status": "finish",
+            "fontSize": "90",
+            "fontType": "bold"
+        },
+        "font1": {
+            "fontSize": "50",
+            "fontName": "Verdana"
+        },
+        
+        "label": {
+            "frame": "{{5,6},{7,8}}",
+            "text": "My name is JJ.",
+            "textColor": "#FFFFDDEE",
+            "fontStyle": {
+                "fontSize": "30",
+                "fontType": "1"
+            }
+        },
+        
+        "view": {
+            "frame": "{{5,6},{7,8}}",
+            "backgroundColor": "#FF000000"
+        },
+        
+        "imageView": {
+            "image": "aaa.png",
+            "highlightedImage": "bbb.png"
+        },
+        
+        "cache": {
+            "frame": "{{7,6},{9,2}}",
+            "backgroundColor": "#FF00AA00"
+        },
+        
+        "inheritImageView": {
+            "frame": "{{17,36},{59,22}}",
+            "backgroundColor": "#FFCCDDFF",
+            "image": "ccc.png",
+            "highlightedImage": "ddd.png"
+        },
+        
+        "mergeLabel": {
+            "textColor": "#FFBBAA00",
+            "numberOfLines": "5",
+            "backgroundColor": "#FFCCDDFF"
+        },
+        
+        "mergeStatueLabel": {
+            "frame": "{{17,36},{59,22}}",
+            "text": "hello world"
+        },
+        
+        "moreFileLabel": {
+            "text": "JJ hello",
+            "textColor": "#FF000000"
+        },
+        
+        "moreFileStatusIncludeSonLabel": {
+            "text": "JJ hello",
+            "numberOfLines": "5",
+            "fontStyle": {
+                "fontSize": "30"
+            }
+        },
+        
+        "moreFileStatusFinishLabel": {
+            "status": "finish",
+            "textColor": "#FFFFDDEE",
+            "fontStyle": {
+                "fontType": "1"
+            }
+        },
+        
+        "testLabel": {
+            "frame": "{{17,36},{59,22}}",
+            "text": "portrait",
+            "textColor": "#FF23d4e5",
+            "backgroundColor": "#FF573897"
+        }
+    },
+    "landscape": {
+        "mergeLabel": {
+            "frame": "{{17,36},{59,22}}",
+            "text": "hello world"
+        },
+        
+        "mergeStatueLabel": {
+            "status": "finish",
+            "frame": "{{17,36},{59,22}}",
+            "text": "hello world"
+        },
+        
+        "testLabel": {
+            "text": "landscape",
+            "backgroundColor": "#FF097825"
+        }
+    }
+}

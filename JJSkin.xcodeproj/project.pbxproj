@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C086A181B1CA3AF00E2D67F /* JJSkinView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C086A111B1CA3AF00E2D67F /* JJSkinView.m */; };
+		7C086A191B1CA3AF00E2D67F /* JJSkinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C086A131B1CA3AF00E2D67F /* JJSkinViewController.m */; };
+		7C086A1A1B1CA3AF00E2D67F /* UIView+JJSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C086A151B1CA3AF00E2D67F /* UIView+JJSkin.m */; };
+		7C086A1B1B1CA3AF00E2D67F /* UIViewController+JJSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C086A171B1CA3AF00E2D67F /* UIViewController+JJSkin.m */; };
 		A1FDCF721B1C417B00090407 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FDCF711B1C417B00090407 /* main.m */; };
 		A1FDCF751B1C417B00090407 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FDCF741B1C417B00090407 /* AppDelegate.m */; };
 		A1FDCF781B1C417B00090407 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FDCF771B1C417B00090407 /* ViewController.m */; };
@@ -14,6 +18,26 @@
 		A1FDCF7D1B1C417B00090407 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1FDCF7C1B1C417B00090407 /* Images.xcassets */; };
 		A1FDCF801B1C417B00090407 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1FDCF7E1B1C417B00090407 /* LaunchScreen.xib */; };
 		A1FDCF8C1B1C417B00090407 /* JJSkinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FDCF8B1B1C417B00090407 /* JJSkinTests.m */; };
+		A1FDCFFC1B1C64A500090407 /* JJButtonStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FDCFD61B1C64A500090407 /* JJButtonStyle.m */; };
+		A1FDCFFD1B1C64A500090407 /* JJCommonStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FDCFD81B1C64A500090407 /* JJCommonStyle.m */; };
+		A1FDCFFE1B1C64A500090407 /* JJControlStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FDCFDA1B1C64A500090407 /* JJControlStyle.m */; };
+		A1FDCFFF1B1C64A500090407 /* JJFontStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FDCFDC1B1C64A500090407 /* JJFontStyle.m */; };
+		A1FDD0001B1C64A500090407 /* JJImageViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FDCFDE1B1C64A500090407 /* JJImageViewStyle.m */; };
+		A1FDD0011B1C64A500090407 /* JJLabelStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FDCFE01B1C64A500090407 /* JJLabelStyle.m */; };
+		A1FDD0021B1C64A500090407 /* JJSkin+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FDCFE21B1C64A500090407 /* JJSkin+Test.m */; };
+		A1FDD0031B1C64A500090407 /* jjSkin-iPhone 5C.json in Resources */ = {isa = PBXBuildFile; fileRef = A1FDCFE31B1C64A500090407 /* jjSkin-iPhone 5C.json */; };
+		A1FDD0041B1C64A500090407 /* jjSkin-iPhone.json in Resources */ = {isa = PBXBuildFile; fileRef = A1FDCFE41B1C64A500090407 /* jjSkin-iPhone.json */; };
+		A1FDD0051B1C64A500090407 /* jjSkin-iPhone320x568.json in Resources */ = {isa = PBXBuildFile; fileRef = A1FDCFE51B1C64A500090407 /* jjSkin-iPhone320x568.json */; };
+		A1FDD0061B1C64A500090407 /* jjSkin-iPhone375x667.json in Resources */ = {isa = PBXBuildFile; fileRef = A1FDCFE61B1C64A500090407 /* jjSkin-iPhone375x667.json */; };
+		A1FDD0071B1C64A500090407 /* JJSkinConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FDCFE91B1C64A500090407 /* JJSkinConfig.m */; };
+		A1FDD0081B1C64A500090407 /* JJSkinManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FDCFEB1B1C64A500090407 /* JJSkinManager.m */; };
+		A1FDD0091B1C64A500090407 /* JJSkinStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FDCFED1B1C64A500090407 /* JJSkinStyle.m */; };
+		A1FDD00A1B1C64A500090407 /* JJViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FDCFF11B1C64A500090407 /* JJViewStyle.m */; };
+		A1FDD00B1B1C64A500090407 /* NSData+JJ.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FDCFF31B1C64A500090407 /* NSData+JJ.m */; };
+		A1FDD00C1B1C64A500090407 /* NSObject+JJ.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FDCFF51B1C64A500090407 /* NSObject+JJ.m */; };
+		A1FDD00D1B1C64A500090407 /* NSString+JJ.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FDCFF71B1C64A500090407 /* NSString+JJ.m */; };
+		A1FDD00E1B1C64A500090407 /* UIColor+JJ.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FDCFF91B1C64A500090407 /* UIColor+JJ.m */; };
+		A1FDD00F1B1C64A500090407 /* UIDevice+JJ.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FDCFFB1B1C64A500090407 /* UIDevice+JJ.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +51,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7C086A0F1B1CA3AF00E2D67F /* JJSkinHandleDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJSkinHandleDelegate.h; sourceTree = "<group>"; };
+		7C086A101B1CA3AF00E2D67F /* JJSkinView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJSkinView.h; sourceTree = "<group>"; };
+		7C086A111B1CA3AF00E2D67F /* JJSkinView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJSkinView.m; sourceTree = "<group>"; };
+		7C086A121B1CA3AF00E2D67F /* JJSkinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJSkinViewController.h; sourceTree = "<group>"; };
+		7C086A131B1CA3AF00E2D67F /* JJSkinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJSkinViewController.m; sourceTree = "<group>"; };
+		7C086A141B1CA3AF00E2D67F /* UIView+JJSkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JJSkin.h"; sourceTree = "<group>"; };
+		7C086A151B1CA3AF00E2D67F /* UIView+JJSkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JJSkin.m"; sourceTree = "<group>"; };
+		7C086A161B1CA3AF00E2D67F /* UIViewController+JJSkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JJSkin.h"; sourceTree = "<group>"; };
+		7C086A171B1CA3AF00E2D67F /* UIViewController+JJSkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JJSkin.m"; sourceTree = "<group>"; };
 		A1FDCF6C1B1C417B00090407 /* JJSkin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JJSkin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1FDCF701B1C417B00090407 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1FDCF711B1C417B00090407 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +73,45 @@
 		A1FDCF851B1C417B00090407 /* JJSkinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JJSkinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1FDCF8A1B1C417B00090407 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1FDCF8B1B1C417B00090407 /* JJSkinTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJSkinTests.m; sourceTree = "<group>"; };
+		A1FDCFD51B1C64A500090407 /* JJButtonStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJButtonStyle.h; sourceTree = "<group>"; };
+		A1FDCFD61B1C64A500090407 /* JJButtonStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJButtonStyle.m; sourceTree = "<group>"; };
+		A1FDCFD71B1C64A500090407 /* JJCommonStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJCommonStyle.h; sourceTree = "<group>"; };
+		A1FDCFD81B1C64A500090407 /* JJCommonStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJCommonStyle.m; sourceTree = "<group>"; };
+		A1FDCFD91B1C64A500090407 /* JJControlStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJControlStyle.h; sourceTree = "<group>"; };
+		A1FDCFDA1B1C64A500090407 /* JJControlStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJControlStyle.m; sourceTree = "<group>"; };
+		A1FDCFDB1B1C64A500090407 /* JJFontStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJFontStyle.h; sourceTree = "<group>"; };
+		A1FDCFDC1B1C64A500090407 /* JJFontStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJFontStyle.m; sourceTree = "<group>"; };
+		A1FDCFDD1B1C64A500090407 /* JJImageViewStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJImageViewStyle.h; sourceTree = "<group>"; };
+		A1FDCFDE1B1C64A500090407 /* JJImageViewStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJImageViewStyle.m; sourceTree = "<group>"; };
+		A1FDCFDF1B1C64A500090407 /* JJLabelStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJLabelStyle.h; sourceTree = "<group>"; };
+		A1FDCFE01B1C64A500090407 /* JJLabelStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJLabelStyle.m; sourceTree = "<group>"; };
+		A1FDCFE11B1C64A500090407 /* JJSkin+Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JJSkin+Test.h"; sourceTree = "<group>"; };
+		A1FDCFE21B1C64A500090407 /* JJSkin+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JJSkin+Test.m"; sourceTree = "<group>"; };
+		A1FDCFE31B1C64A500090407 /* jjSkin-iPhone 5C.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "jjSkin-iPhone 5C.json"; sourceTree = "<group>"; };
+		A1FDCFE41B1C64A500090407 /* jjSkin-iPhone.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "jjSkin-iPhone.json"; sourceTree = "<group>"; };
+		A1FDCFE51B1C64A500090407 /* jjSkin-iPhone320x568.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "jjSkin-iPhone320x568.json"; sourceTree = "<group>"; };
+		A1FDCFE61B1C64A500090407 /* jjSkin-iPhone375x667.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "jjSkin-iPhone375x667.json"; sourceTree = "<group>"; };
+		A1FDCFE71B1C64A500090407 /* JJSkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJSkin.h; sourceTree = "<group>"; };
+		A1FDCFE81B1C64A500090407 /* JJSkinConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJSkinConfig.h; sourceTree = "<group>"; };
+		A1FDCFE91B1C64A500090407 /* JJSkinConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJSkinConfig.m; sourceTree = "<group>"; };
+		A1FDCFEA1B1C64A500090407 /* JJSkinManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJSkinManager.h; sourceTree = "<group>"; };
+		A1FDCFEB1B1C64A500090407 /* JJSkinManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJSkinManager.m; sourceTree = "<group>"; };
+		A1FDCFEC1B1C64A500090407 /* JJSkinStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJSkinStyle.h; sourceTree = "<group>"; };
+		A1FDCFED1B1C64A500090407 /* JJSkinStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJSkinStyle.m; sourceTree = "<group>"; };
+		A1FDCFEE1B1C64A500090407 /* JJSkinStyleDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJSkinStyleDataSource.h; sourceTree = "<group>"; };
+		A1FDCFEF1B1C64A500090407 /* JJSkinStyleDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJSkinStyleDelegate.h; sourceTree = "<group>"; };
+		A1FDCFF01B1C64A500090407 /* JJViewStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJViewStyle.h; sourceTree = "<group>"; };
+		A1FDCFF11B1C64A500090407 /* JJViewStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJViewStyle.m; sourceTree = "<group>"; };
+		A1FDCFF21B1C64A500090407 /* NSData+JJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+JJ.h"; sourceTree = "<group>"; };
+		A1FDCFF31B1C64A500090407 /* NSData+JJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+JJ.m"; sourceTree = "<group>"; };
+		A1FDCFF41B1C64A500090407 /* NSObject+JJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JJ.h"; sourceTree = "<group>"; };
+		A1FDCFF51B1C64A500090407 /* NSObject+JJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JJ.m"; sourceTree = "<group>"; };
+		A1FDCFF61B1C64A500090407 /* NSString+JJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JJ.h"; sourceTree = "<group>"; };
+		A1FDCFF71B1C64A500090407 /* NSString+JJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JJ.m"; sourceTree = "<group>"; };
+		A1FDCFF81B1C64A500090407 /* UIColor+JJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+JJ.h"; sourceTree = "<group>"; };
+		A1FDCFF91B1C64A500090407 /* UIColor+JJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JJ.m"; sourceTree = "<group>"; };
+		A1FDCFFA1B1C64A500090407 /* UIDevice+JJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+JJ.h"; sourceTree = "<group>"; };
+		A1FDCFFB1B1C64A500090407 /* UIDevice+JJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+JJ.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +132,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C086A0E1B1CA38500E2D67F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7C086A0F1B1CA3AF00E2D67F /* JJSkinHandleDelegate.h */,
+				7C086A101B1CA3AF00E2D67F /* JJSkinView.h */,
+				7C086A111B1CA3AF00E2D67F /* JJSkinView.m */,
+				7C086A121B1CA3AF00E2D67F /* JJSkinViewController.h */,
+				7C086A131B1CA3AF00E2D67F /* JJSkinViewController.m */,
+				7C086A141B1CA3AF00E2D67F /* UIView+JJSkin.h */,
+				7C086A151B1CA3AF00E2D67F /* UIView+JJSkin.m */,
+				7C086A161B1CA3AF00E2D67F /* UIViewController+JJSkin.h */,
+				7C086A171B1CA3AF00E2D67F /* UIViewController+JJSkin.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		A1FDCF631B1C417B00090407 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +169,7 @@
 		A1FDCF6E1B1C417B00090407 /* JJSkin */ = {
 			isa = PBXGroup;
 			children = (
+				A1FDCFD31B1C648D00090407 /* API */,
 				A1FDCF731B1C417B00090407 /* AppDelegate.h */,
 				A1FDCF741B1C417B00090407 /* AppDelegate.m */,
 				A1FDCF761B1C417B00090407 /* ViewController.h */,
@@ -117,6 +206,101 @@
 				A1FDCF8A1B1C417B00090407 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A1FDCFD31B1C648D00090407 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				A1FDCFD41B1C64A500090407 /* JJSkin */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		A1FDCFD41B1C64A500090407 /* JJSkin */ = {
+			isa = PBXGroup;
+			children = (
+				A1FDD0101B1C64F900090407 /* Category */,
+				A1FDD0131B1C651300090407 /* Config */,
+				A1FDCFE71B1C64A500090407 /* JJSkin.h */,
+				A1FDD0141B1C651A00090407 /* Manager */,
+				A1FDD0111B1C650100090407 /* Style */,
+				A1FDD0121B1C650900090407 /* Test */,
+				7C086A0E1B1CA38500E2D67F /* View */,
+			);
+			path = JJSkin;
+			sourceTree = "<group>";
+		};
+		A1FDD0101B1C64F900090407 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				A1FDCFF21B1C64A500090407 /* NSData+JJ.h */,
+				A1FDCFF31B1C64A500090407 /* NSData+JJ.m */,
+				A1FDCFF41B1C64A500090407 /* NSObject+JJ.h */,
+				A1FDCFF51B1C64A500090407 /* NSObject+JJ.m */,
+				A1FDCFF61B1C64A500090407 /* NSString+JJ.h */,
+				A1FDCFF71B1C64A500090407 /* NSString+JJ.m */,
+				A1FDCFF81B1C64A500090407 /* UIColor+JJ.h */,
+				A1FDCFF91B1C64A500090407 /* UIColor+JJ.m */,
+				A1FDCFFA1B1C64A500090407 /* UIDevice+JJ.h */,
+				A1FDCFFB1B1C64A500090407 /* UIDevice+JJ.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+		A1FDD0111B1C650100090407 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				A1FDCFD51B1C64A500090407 /* JJButtonStyle.h */,
+				A1FDCFD61B1C64A500090407 /* JJButtonStyle.m */,
+				A1FDCFD71B1C64A500090407 /* JJCommonStyle.h */,
+				A1FDCFD81B1C64A500090407 /* JJCommonStyle.m */,
+				A1FDCFD91B1C64A500090407 /* JJControlStyle.h */,
+				A1FDCFDA1B1C64A500090407 /* JJControlStyle.m */,
+				A1FDCFDB1B1C64A500090407 /* JJFontStyle.h */,
+				A1FDCFDC1B1C64A500090407 /* JJFontStyle.m */,
+				A1FDCFDD1B1C64A500090407 /* JJImageViewStyle.h */,
+				A1FDCFDE1B1C64A500090407 /* JJImageViewStyle.m */,
+				A1FDCFDF1B1C64A500090407 /* JJLabelStyle.h */,
+				A1FDCFE01B1C64A500090407 /* JJLabelStyle.m */,
+				A1FDCFEC1B1C64A500090407 /* JJSkinStyle.h */,
+				A1FDCFED1B1C64A500090407 /* JJSkinStyle.m */,
+				A1FDCFEE1B1C64A500090407 /* JJSkinStyleDataSource.h */,
+				A1FDCFEF1B1C64A500090407 /* JJSkinStyleDelegate.h */,
+				A1FDCFF01B1C64A500090407 /* JJViewStyle.h */,
+				A1FDCFF11B1C64A500090407 /* JJViewStyle.m */,
+			);
+			name = Style;
+			sourceTree = "<group>";
+		};
+		A1FDD0121B1C650900090407 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				A1FDCFE31B1C64A500090407 /* jjSkin-iPhone 5C.json */,
+				A1FDCFE41B1C64A500090407 /* jjSkin-iPhone.json */,
+				A1FDCFE51B1C64A500090407 /* jjSkin-iPhone320x568.json */,
+				A1FDCFE61B1C64A500090407 /* jjSkin-iPhone375x667.json */,
+				A1FDCFE11B1C64A500090407 /* JJSkin+Test.h */,
+				A1FDCFE21B1C64A500090407 /* JJSkin+Test.m */,
+			);
+			name = Test;
+			sourceTree = "<group>";
+		};
+		A1FDD0131B1C651300090407 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				A1FDCFE81B1C64A500090407 /* JJSkinConfig.h */,
+				A1FDCFE91B1C64A500090407 /* JJSkinConfig.m */,
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
+		A1FDD0141B1C651A00090407 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				A1FDCFEA1B1C64A500090407 /* JJSkinManager.h */,
+				A1FDCFEB1B1C64A500090407 /* JJSkinManager.m */,
+			);
+			name = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +385,10 @@
 			files = (
 				A1FDCF7B1B1C417B00090407 /* Main.storyboard in Resources */,
 				A1FDCF801B1C417B00090407 /* LaunchScreen.xib in Resources */,
+				A1FDD0051B1C64A500090407 /* jjSkin-iPhone320x568.json in Resources */,
+				A1FDD0031B1C64A500090407 /* jjSkin-iPhone 5C.json in Resources */,
+				A1FDD0061B1C64A500090407 /* jjSkin-iPhone375x667.json in Resources */,
+				A1FDD0041B1C64A500090407 /* jjSkin-iPhone.json in Resources */,
 				A1FDCF7D1B1C417B00090407 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,9 +407,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1FDD0091B1C64A500090407 /* JJSkinStyle.m in Sources */,
+				A1FDD00B1B1C64A500090407 /* NSData+JJ.m in Sources */,
+				A1FDD0001B1C64A500090407 /* JJImageViewStyle.m in Sources */,
+				A1FDD00E1B1C64A500090407 /* UIColor+JJ.m in Sources */,
 				A1FDCF781B1C417B00090407 /* ViewController.m in Sources */,
+				A1FDD0081B1C64A500090407 /* JJSkinManager.m in Sources */,
+				A1FDD00F1B1C64A500090407 /* UIDevice+JJ.m in Sources */,
+				A1FDCFFE1B1C64A500090407 /* JJControlStyle.m in Sources */,
 				A1FDCF751B1C417B00090407 /* AppDelegate.m in Sources */,
+				A1FDD0071B1C64A500090407 /* JJSkinConfig.m in Sources */,
+				A1FDD0021B1C64A500090407 /* JJSkin+Test.m in Sources */,
+				7C086A1A1B1CA3AF00E2D67F /* UIView+JJSkin.m in Sources */,
 				A1FDCF721B1C417B00090407 /* main.m in Sources */,
+				A1FDCFFF1B1C64A500090407 /* JJFontStyle.m in Sources */,
+				A1FDD00A1B1C64A500090407 /* JJViewStyle.m in Sources */,
+				A1FDD0011B1C64A500090407 /* JJLabelStyle.m in Sources */,
+				7C086A181B1CA3AF00E2D67F /* JJSkinView.m in Sources */,
+				A1FDD00D1B1C64A500090407 /* NSString+JJ.m in Sources */,
+				A1FDCFFD1B1C64A500090407 /* JJCommonStyle.m in Sources */,
+				A1FDCFFC1B1C64A500090407 /* JJButtonStyle.m in Sources */,
+				7C086A1B1B1CA3AF00E2D67F /* UIViewController+JJSkin.m in Sources */,
+				7C086A191B1CA3AF00E2D67F /* JJSkinViewController.m in Sources */,
+				A1FDD00C1B1C64A500090407 /* NSObject+JJ.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +626,7 @@
 				A1FDCF911B1C417B00090407 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A1FDCF921B1C417B00090407 /* Build configuration list for PBXNativeTarget "JJSkinTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +635,7 @@
 				A1FDCF941B1C417B00090407 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

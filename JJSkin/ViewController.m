@@ -2,17 +2,27 @@
 //  ViewController.m
 //  JJSkin
 //
-//  Created by gongjian03 on 6/1/15.
-//  Copyright (c) 2015 gongjian. All rights reserved.
+//  Created by JJ on 6/1/15.
+//  Copyright (c) 2015 JJ. All rights reserved.
 //
 
 #import "ViewController.h"
 
+#import "JJSkin.h"
+
 @interface ViewController ()
+
+@property (nonatomic, weak) IBOutlet UILabel *label;
 
 @end
 
 @implementation ViewController
+
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    [JJSkinManager updateLabel:_label withID:@"R.testLabel"];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

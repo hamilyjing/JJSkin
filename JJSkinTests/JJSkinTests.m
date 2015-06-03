@@ -2,12 +2,14 @@
 //  JJSkinTests.m
 //  JJSkinTests
 //
-//  Created by gongjian03 on 6/1/15.
-//  Copyright (c) 2015 gongjian. All rights reserved.
+//  Created by JJ on 6/1/15.
+//  Copyright (c) 2015 JJ. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
+
+extern void jjSkinTest();
 
 @interface JJSkinTests : XCTestCase
 
@@ -35,6 +37,11 @@
     [self measureBlock:^{
         // Put the code you want to measure the time of here.
     }];
+}
+
+- (void)testJJSkin
+{
+    jjSkinTest();
 }
 
 @end

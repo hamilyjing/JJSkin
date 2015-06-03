@@ -1,0 +1,29 @@
+{
+    "portrait": {
+        "moreFileLabel": {
+            "textColor": "#FFFFDDEE",
+            "fontStyle": {
+                "fontSize": "30",
+                "fontType": "1"
+            }
+        },
+        
+        "moreFileStatusIncludeSonLabel": {
+            "status": "finishIncludeSon",
+            "textColor": "#FFFFDDEE",
+            "fontStyle": {
+                "fontType": "1"
+            }
+        },
+        
+        "moreFileStatusFinishLabel": {
+            "status": "finish",
+            "textColor": "#FFFFDDEE",
+            "fontStyle": {
+                "fontSize": "30"
+            }
+        }
+    },
+    "landscape": {
+    }
+}

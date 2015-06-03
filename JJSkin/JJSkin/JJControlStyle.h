@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  JJControlStyle.h
 //  JJSkin
 //
 //  Created by JJ on 6/1/15.
 //  Copyright (c) 2015 JJ. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "JJViewStyle.h"
 
-@interface ViewController : UIViewController
-
+@interface JJControlStyle : JJViewStyle
 
 @end
-

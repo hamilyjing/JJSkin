@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  UIViewController+JJSkin.h
 //  JJSkin
 //
 //  Created by JJ on 6/1/15.
@@ -8,10 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+#import "JJSkinHandleDelegate.h"
 
-@property (strong, nonatomic) UIWindow *window;
-
+@interface UIViewController (JJSkin) <JJSkinHandleDelegate>
 
 @end
-
