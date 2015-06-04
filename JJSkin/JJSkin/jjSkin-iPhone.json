@@ -117,6 +117,17 @@
             "text": "portrait",
             "textColor": "#FF23d4e5",
             "backgroundColor": "#FF573897"
+        },
+        
+        "myselfTestView": {
+            "label": {
+                "text": "myselfTestView",
+                "lineBreakMode": "wordWrapping"
+            },
+            "imageView": {
+                "image": "ccc.png",
+                "highlightedImage": "ggg.png"
+            }
         }
     },
     "landscape": {

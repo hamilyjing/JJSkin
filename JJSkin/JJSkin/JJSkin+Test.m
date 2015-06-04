@@ -10,6 +10,7 @@
 #import <UIKit/UIKit.h>
 
 #import "JJSkin+Test.h"
+#import "JJMyselfTestStyle.h"
 
 #import "JJSkin.h"
 #import "UIColor+JJ.h"
@@ -105,6 +106,11 @@ void jjSkinTest()
     
     __unused JJLabelStyle *moreFileStatusFinishLabelStyle = [JJSkinManager getLabelStyleByID:@"R.moreFileStatusFinishLabel"];
     __unused UILabel *moreFileStatusFinishLabel = [JJSkinManager getLabelByID:@"R.moreFileStatusFinishLabel"];
+    
+    // self defind style
+    __unused JJMyselfTestView *myselfTestView = [[JJMyselfTestView alloc] initWithFrame:CGRectZero];
+    
+    __unused JJMyselfTestView *myselfTestView1 = [JJSkinManager getObjectByID:@"R.myselfTestView" withStyleClass:[JJMyselfTestStyle class]];
     
     /************* below need landsacpe ******************/
     

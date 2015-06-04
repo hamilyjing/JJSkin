@@ -11,6 +11,7 @@
 		7C086A191B1CA3AF00E2D67F /* JJSkinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C086A131B1CA3AF00E2D67F /* JJSkinViewController.m */; };
 		7C086A1A1B1CA3AF00E2D67F /* UIView+JJSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C086A151B1CA3AF00E2D67F /* UIView+JJSkin.m */; };
 		7C086A1B1B1CA3AF00E2D67F /* UIViewController+JJSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C086A171B1CA3AF00E2D67F /* UIViewController+JJSkin.m */; };
+		A10A7FF01B1FE5D000B12B78 /* JJMyselfTestStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = A10A7FEF1B1FE5D000B12B78 /* JJMyselfTestStyle.m */; };
 		A1FDCF721B1C417B00090407 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FDCF711B1C417B00090407 /* main.m */; };
 		A1FDCF751B1C417B00090407 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FDCF741B1C417B00090407 /* AppDelegate.m */; };
 		A1FDCF781B1C417B00090407 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FDCF771B1C417B00090407 /* ViewController.m */; };
@@ -60,6 +61,8 @@
 		7C086A151B1CA3AF00E2D67F /* UIView+JJSkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JJSkin.m"; sourceTree = "<group>"; };
 		7C086A161B1CA3AF00E2D67F /* UIViewController+JJSkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JJSkin.h"; sourceTree = "<group>"; };
 		7C086A171B1CA3AF00E2D67F /* UIViewController+JJSkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JJSkin.m"; sourceTree = "<group>"; };
+		A10A7FEE1B1FE5D000B12B78 /* JJMyselfTestStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJMyselfTestStyle.h; sourceTree = "<group>"; };
+		A10A7FEF1B1FE5D000B12B78 /* JJMyselfTestStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJMyselfTestStyle.m; sourceTree = "<group>"; };
 		A1FDCF6C1B1C417B00090407 /* JJSkin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JJSkin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1FDCF701B1C417B00090407 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1FDCF711B1C417B00090407 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -281,6 +284,8 @@
 				A1FDCFE61B1C64A500090407 /* jjSkin-iPhone375x667.json */,
 				A1FDCFE11B1C64A500090407 /* JJSkin+Test.h */,
 				A1FDCFE21B1C64A500090407 /* JJSkin+Test.m */,
+				A10A7FEE1B1FE5D000B12B78 /* JJMyselfTestStyle.h */,
+				A10A7FEF1B1FE5D000B12B78 /* JJMyselfTestStyle.m */,
 			);
 			name = Test;
 			sourceTree = "<group>";
@@ -426,6 +431,7 @@
 				7C086A181B1CA3AF00E2D67F /* JJSkinView.m in Sources */,
 				A1FDD00D1B1C64A500090407 /* NSString+JJ.m in Sources */,
 				A1FDCFFD1B1C64A500090407 /* JJCommonStyle.m in Sources */,
+				A10A7FF01B1FE5D000B12B78 /* JJMyselfTestStyle.m in Sources */,
 				A1FDCFFC1B1C64A500090407 /* JJButtonStyle.m in Sources */,
 				7C086A1B1B1CA3AF00E2D67F /* UIViewController+JJSkin.m in Sources */,
 				7C086A191B1CA3AF00E2D67F /* JJSkinViewController.m in Sources */,

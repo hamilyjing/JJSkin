@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 #import "JJSkin.h"
+#import "JJSkin+Test.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,10 @@
 @end
 
 @implementation ViewController
+
+- (IBAction)jjskinTest:(id)sender {
+    jjSkinTest();
+}
 
 - (void)viewDidLayoutSubviews
 {
