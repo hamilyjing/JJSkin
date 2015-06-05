@@ -28,6 +28,8 @@
 #import "JJSkinStyleDelegate.h"
 #import "JJViewStyle.h"
 
+extern NSString *JJSkinChangedNotification;
+
 @interface JJSkinManager ()
 
 @property (nonatomic, strong) NSMutableDictionary *fileContentDic;
@@ -286,7 +288,18 @@
     return image;
 }
 
-#pragma mark - 
+#pragma mark - Change skin
+
+- (void)changeSkin
+{
+    [self removeAllStyleCache];
+    
+    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+    [nc postNotificationName:JJSkinChangedNotification object:self];
+}
+
+#pragma mark - Remove cache
+
 - (void)removeAllStyleCache
 {
     [_idStyleDic removeAllObjects];

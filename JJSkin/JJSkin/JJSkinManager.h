@@ -25,7 +25,7 @@
 
 + (instancetype)sharedSkinManager;
 
-// Common Method to get style and object, and update object
+// Common Method to get style and object, or update object
 + (id)getStyleByID:(NSString *)id withStyleClass:(Class)styleClass;
 + (id)getObjectByID:(NSString *)id withStyleClass:(Class)styleClass;
 + (void)updateObject:(id)object withID:(NSString *)id withStyleClass:(Class)styleClass;
@@ -75,6 +75,9 @@
 + (CGSize)getSizeFromString:(NSString *)string;
 + (UIColor *)getColorFromString:(NSString *)string;
 + (UIImage *)getImageFromString:(NSString *)string;
+
+// Change skin
+- (void)changeSkin;
 
 // Remove cache
 - (void)removeAllStyleCache;
