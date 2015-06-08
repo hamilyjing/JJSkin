@@ -41,9 +41,14 @@
     {
         label.textColor = _textColor;
     }
-    
-    [self setTextAlignmentByLabel:label];
-    [self setTextLineBreakModeByLabel:label];
+    if (_textAlignment)
+    {
+        label.textAlignment = [JJSkinManager getIntegerByID:_textAlignment];
+    }
+    if (_lineBreakMode)
+    {
+        label.lineBreakMode = [JJSkinManager getIntegerByID:_lineBreakMode];
+    }
     
     if (_numberOfLines)
     {
@@ -56,80 +61,4 @@
     }
 }
 
-#pragma mark - Private
-
-- (void)setTextAlignmentByLabel:(UILabel *)label
-{
-    if (!_textAlignment)
-    {
-        return;
-    }
-    
-    NSTextAlignment alignment = NSTextAlignmentLeft;
-    if ([JJTextAlignmentCenter isEqualToString:_textAlignment])
-    {
-        alignment = NSTextAlignmentCenter;
-    }
-    else if ([JJTextAlignmentRight isEqualToString:_textAlignment])
-    {
-        alignment = NSTextAlignmentRight;
-    }
-    else if ([JJTextAlignmentJustified isEqualToString:_textAlignment])
-    {
-        alignment = NSTextAlignmentJustified;
-    }
-    else if ([JJTextAlignmentNatural isEqualToString:_textAlignment])
-    {
-        alignment = NSTextAlignmentNatural;
-    }
-    
-    label.textAlignment = alignment;
-}
-
-- (void)setTextLineBreakModeByLabel:(UILabel *)label
-{
-    if (!_lineBreakMode)
-    {
-        return;
-    }
-    
-    NSLineBreakMode breakMode = NSLineBreakByTruncatingTail;
-    
-    if ([JJTextLineBreakModeByWordWrapping isEqualToString:_lineBreakMode])
-    {
-        breakMode = NSLineBreakByWordWrapping;
-    }
-    else if ([JJTextLineBreakModeByCharWrapping isEqualToString:_lineBreakMode])
-    {
-        breakMode = NSLineBreakByCharWrapping;
-    }
-    else if ([JJTextLineBreakModeByClipping isEqualToString:_lineBreakMode])
-    {
-        breakMode = NSLineBreakByClipping;
-    }
-    else if ([JJTextLineBreakModeByTruncatingHead isEqualToString:_lineBreakMode])
-    {
-        breakMode = NSLineBreakByTruncatingHead;
-    }
-    else if ([JJTextLineBreakModeByTruncatingMiddle isEqualToString:_lineBreakMode])
-    {
-        breakMode = NSLineBreakByTruncatingMiddle;
-    }
-    
-    label.lineBreakMode = breakMode;
-}
-
 @end
-
-NSString *JJTextAlignmentLeft = @"left";
-NSString *JJTextAlignmentCenter = @"center";
-NSString *JJTextAlignmentRight = @"right";
-NSString *JJTextAlignmentJustified = @"justified";
-NSString *JJTextAlignmentNatural = @"natural";
-
-NSString *JJTextLineBreakModeByWordWrapping = @"wordWrapping";
-NSString *JJTextLineBreakModeByCharWrapping = @"charWrapping";
-NSString *JJTextLineBreakModeByClipping = @"clipping";
-NSString *JJTextLineBreakModeByTruncatingHead = @"truncatingHead";
-NSString *JJTextLineBreakModeByTruncatingTail = @"truncatingTail";
-NSString *JJTextLineBreakModeByTruncatingMiddle = @"truncatingMiddle";
