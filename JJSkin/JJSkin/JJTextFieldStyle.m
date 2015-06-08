@@ -9,7 +9,6 @@
 #import "JJTextFieldStyle.h"
 
 #import "JJFontStyle.h"
-#import "NSObject+JJ.h"
 #import "JJSkinManager.h"
 
 @implementation JJTextFieldStyle

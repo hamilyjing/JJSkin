@@ -13,6 +13,9 @@
 		7C086A1B1B1CA3AF00E2D67F /* UIViewController+JJSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C086A171B1CA3AF00E2D67F /* UIViewController+JJSkin.m */; };
 		A10A7FF01B1FE5D000B12B78 /* JJMyselfTestStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = A10A7FEF1B1FE5D000B12B78 /* JJMyselfTestStyle.m */; };
 		A15FC4161B2542AC00958883 /* JJTextFieldStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = A15FC4151B2542AC00958883 /* JJTextFieldStyle.m */; };
+		A15FC4191B257C9A00958883 /* JJScrollViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = A15FC4181B257C9A00958883 /* JJScrollViewStyle.m */; };
+		A15FC41C1B257CB000958883 /* JJTableViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = A15FC41B1B257CB000958883 /* JJTableViewStyle.m */; };
+		A15FC41F1B257CBF00958883 /* JJTextViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = A15FC41E1B257CBF00958883 /* JJTextViewStyle.m */; };
 		A1FDCF721B1C417B00090407 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FDCF711B1C417B00090407 /* main.m */; };
 		A1FDCF751B1C417B00090407 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FDCF741B1C417B00090407 /* AppDelegate.m */; };
 		A1FDCF781B1C417B00090407 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FDCF771B1C417B00090407 /* ViewController.m */; };
@@ -66,6 +69,12 @@
 		A10A7FEF1B1FE5D000B12B78 /* JJMyselfTestStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJMyselfTestStyle.m; sourceTree = "<group>"; };
 		A15FC4141B2542AC00958883 /* JJTextFieldStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJTextFieldStyle.h; sourceTree = "<group>"; };
 		A15FC4151B2542AC00958883 /* JJTextFieldStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJTextFieldStyle.m; sourceTree = "<group>"; };
+		A15FC4171B257C9A00958883 /* JJScrollViewStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJScrollViewStyle.h; sourceTree = "<group>"; };
+		A15FC4181B257C9A00958883 /* JJScrollViewStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJScrollViewStyle.m; sourceTree = "<group>"; };
+		A15FC41A1B257CB000958883 /* JJTableViewStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJTableViewStyle.h; sourceTree = "<group>"; };
+		A15FC41B1B257CB000958883 /* JJTableViewStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJTableViewStyle.m; sourceTree = "<group>"; };
+		A15FC41D1B257CBF00958883 /* JJTextViewStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJTextViewStyle.h; sourceTree = "<group>"; };
+		A15FC41E1B257CBF00958883 /* JJTextViewStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJTextViewStyle.m; sourceTree = "<group>"; };
 		A1FDCF6C1B1C417B00090407 /* JJSkin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JJSkin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1FDCF701B1C417B00090407 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1FDCF711B1C417B00090407 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -268,12 +277,18 @@
 				A1FDCFDE1B1C64A500090407 /* JJImageViewStyle.m */,
 				A1FDCFDF1B1C64A500090407 /* JJLabelStyle.h */,
 				A1FDCFE01B1C64A500090407 /* JJLabelStyle.m */,
+				A15FC4171B257C9A00958883 /* JJScrollViewStyle.h */,
+				A15FC4181B257C9A00958883 /* JJScrollViewStyle.m */,
 				A1FDCFEC1B1C64A500090407 /* JJSkinStyle.h */,
 				A1FDCFED1B1C64A500090407 /* JJSkinStyle.m */,
 				A1FDCFEE1B1C64A500090407 /* JJSkinStyleDataSource.h */,
 				A1FDCFEF1B1C64A500090407 /* JJSkinStyleDelegate.h */,
+				A15FC41A1B257CB000958883 /* JJTableViewStyle.h */,
+				A15FC41B1B257CB000958883 /* JJTableViewStyle.m */,
 				A15FC4141B2542AC00958883 /* JJTextFieldStyle.h */,
 				A15FC4151B2542AC00958883 /* JJTextFieldStyle.m */,
+				A15FC41D1B257CBF00958883 /* JJTextViewStyle.h */,
+				A15FC41E1B257CBF00958883 /* JJTextViewStyle.m */,
 				A1FDCFF01B1C64A500090407 /* JJViewStyle.h */,
 				A1FDCFF11B1C64A500090407 /* JJViewStyle.m */,
 			);
@@ -422,6 +437,7 @@
 				A1FDD0001B1C64A500090407 /* JJImageViewStyle.m in Sources */,
 				A1FDD00E1B1C64A500090407 /* UIColor+JJ.m in Sources */,
 				A1FDCF781B1C417B00090407 /* ViewController.m in Sources */,
+				A15FC41F1B257CBF00958883 /* JJTextViewStyle.m in Sources */,
 				A1FDD0081B1C64A500090407 /* JJSkinManager.m in Sources */,
 				A1FDD00F1B1C64A500090407 /* UIDevice+JJ.m in Sources */,
 				A1FDCFFE1B1C64A500090407 /* JJControlStyle.m in Sources */,
@@ -438,9 +454,11 @@
 				A1FDD00D1B1C64A500090407 /* NSString+JJ.m in Sources */,
 				A1FDCFFD1B1C64A500090407 /* JJCommonStyle.m in Sources */,
 				A10A7FF01B1FE5D000B12B78 /* JJMyselfTestStyle.m in Sources */,
+				A15FC4191B257C9A00958883 /* JJScrollViewStyle.m in Sources */,
 				A1FDCFFC1B1C64A500090407 /* JJButtonStyle.m in Sources */,
 				7C086A1B1B1CA3AF00E2D67F /* UIViewController+JJSkin.m in Sources */,
 				7C086A191B1CA3AF00E2D67F /* JJSkinViewController.m in Sources */,
+				A15FC41C1B257CB000958883 /* JJTableViewStyle.m in Sources */,
 				A1FDD00C1B1C64A500090407 /* NSObject+JJ.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
