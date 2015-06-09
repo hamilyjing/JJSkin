@@ -16,6 +16,16 @@
 #import "UIColor+JJ.h"
 #import "NSObject+JJ.h"
 
+double measureExecutionTime(void(^block)())
+{
+    CFAbsoluteTime startTime = CFAbsoluteTimeGetCurrent();
+    
+    block();
+    
+    double executionTime = CFAbsoluteTimeGetCurrent() - startTime;
+    return executionTime;
+}
+
 void jjSkinTest()
 {
     // Common
@@ -79,7 +89,14 @@ void jjSkinTest()
     
     // Label
     __unused JJLabelStyle *labelStyle = [JJSkinManager getLabelStyleByID:@"R.label"];
-    __unused UILabel *label = [JJSkinManager getLabelByID:@"R.label"];
+    
+    __unused double labelConsumeTime = measureExecutionTime(^{
+        
+        for (int i = 0; i < 1; ++i)
+        {
+            __unused UILabel *label = [JJSkinManager getLabelByID:@"R.label"];
+        }
+    });
     
     __unused UILabel *label1 = [[UILabel alloc] init];
     [JJSkinManager updateLabel:label1 withID:@"R.label"];
@@ -110,7 +127,13 @@ void jjSkinTest()
     // self defind style
     __unused JJMyselfTestView *myselfTestView = [[JJMyselfTestView alloc] initWithFrame:CGRectZero];
     
-    __unused JJMyselfTestView *myselfTestView1 = [JJSkinManager getObjectByID:@"R.myselfTestView" withStyleClass:[JJMyselfTestStyle class]];
+    __unused double consumeTime = measureExecutionTime(^{
+        
+        for (int i = 0; i < 500; ++i)
+        {
+            __unused JJMyselfTestView *myselfTestView1 = [JJSkinManager getObjectByID:@"R.myselfTestView" withStyleClass:[JJMyselfTestStyle class]];
+        }
+    });
     
     /************* below need landsacpe ******************/
     
