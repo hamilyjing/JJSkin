@@ -90,6 +90,15 @@ void jjSkinTest()
     // Label
     __unused JJLabelStyle *labelStyle = [JJSkinManager getLabelStyleByID:@"R.label"];
     
+    /**
+     test result
+     1   (double) $0 = 0.0001099705696105957
+     10  (double) $0 = 0.00045496225357055664
+     50  (double) $0 = 0.0026829838752746582
+     100 (double) $0 = 0.0027459859848022461
+     200 (double) $0 = 0.0062749981880187988
+     500 (double) $0 = 0.01586604118347168
+     */
     __unused double labelConsumeTime = measureExecutionTime(^{
         
         for (int i = 0; i < 1; ++i)
