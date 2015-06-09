@@ -11,18 +11,11 @@
 
 #import "JJControlStyle.h"
 
-extern NSString *JJButtonTypeCustom;
-extern NSString *JJButtonTypeSystem;
-extern NSString *JJButtonTypeDetailDisclosure;
-extern NSString *JJButtonTypeInfoLight;
-extern NSString *JJButtonTypeInfoDark;
-extern NSString *JJButtonTypeContactAdd;
-
 @class JJLabelStyle;
 
 @interface JJButtonStyle : JJControlStyle
 
-@property (nonatomic, copy) NSString *buttonType;
+@property (nonatomic, copy) NSString *buttonType; // UIButtonType
 
 @property (nonatomic, strong) JJLabelStyle *labelStyle;
 

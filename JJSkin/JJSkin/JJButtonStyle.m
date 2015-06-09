@@ -12,13 +12,6 @@
 #import "JJSkinManager.h"
 #import "JJLabelStyle.h"
 
-NSString *JJButtonTypeCustom = @"custom";
-NSString *JJButtonTypeSystem = @"system";
-NSString *JJButtonTypeDetailDisclosure = @"detailDisclosure";
-NSString *JJButtonTypeInfoLight = @"infoLight";
-NSString *JJButtonTypeInfoDark = @"infoDark";
-NSString *JJButtonTypeContactAdd = @"contactAdd";
-
 @implementation JJButtonStyle
 
 #pragma mark - JJSkinStyleDataSource
@@ -27,27 +20,7 @@ NSString *JJButtonTypeContactAdd = @"contactAdd";
 {
     JJButtonStyle *buttonStyle = (JJButtonStyle *)style;
     
-    UIButtonType type = UIButtonTypeCustom;
-    if ([JJButtonTypeSystem isEqualToString:buttonStyle.buttonType])
-    {
-        type = UIButtonTypeSystem;
-    }
-    else if ([JJButtonTypeDetailDisclosure isEqualToString:buttonStyle.buttonType])
-    {
-        type = UIButtonTypeDetailDisclosure;
-    }
-    else if ([JJButtonTypeInfoLight isEqualToString:buttonStyle.buttonType])
-    {
-        type = UIButtonTypeInfoLight;
-    }
-    else if ([JJButtonTypeInfoDark isEqualToString:buttonStyle.buttonType])
-    {
-        type = UIButtonTypeInfoDark;
-    }
-    else if ([JJButtonTypeContactAdd isEqualToString:buttonStyle.buttonType])
-    {
-        type = UIButtonTypeContactAdd;
-    }
+    UIButtonType type = (UIButtonType)[JJSkinManager getIntegerFromString:buttonStyle.buttonType];
     
     UIButton *button = [UIButton buttonWithType:type];
     [style updateObject:button];

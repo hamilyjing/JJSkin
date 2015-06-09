@@ -10,7 +10,7 @@
         "color": "#FFc58dd0",
         
         "button": {
-            "buttonType": "custom",
+            "buttonType": "0",
             "titleNormal": "normal",
             "titleDisable": "disable",
             "titleHighlighted": "highlighted",
