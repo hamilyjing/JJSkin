@@ -37,7 +37,8 @@ JJSkin皮肤框架适用于所有iOS产品，如果你是一名iOS开发工程�
 1. 下载JJSkin代码，将JJSkin/JJSkin文件夹放到项目中（ARC编译），导入头文件"JJSkin.h”。
  
 2. 编写皮肤文件，根据实际需要来看是否要创建多个配置文件。
- 
+
+```objc 
 {
     "portrait": {
         "stringValue": "1234567890",
@@ -62,9 +63,11 @@ JJSkin皮肤框架适用于所有iOS产品，如果你是一名iOS开发工程�
         }
     }
 }
+```
  
 3. 如果需要，编写配置文件类，实现JJSkinConfig协议，并加入到JJSkinManager对象中。
-  
+
+```objc  
 @protocol JJSkinConfig <NSObject>
  
 - (NSBundle *)bundle;
@@ -80,13 +83,15 @@ JJSkin皮肤框架适用于所有iOS产品，如果你是一名iOS开发工程�
 - (NSArray *)fileNames;
  
 @end
+```
  
 皮肤文件默认放在当前bundle里，并且文件名前缀是"jjSkin-"，文件类型是"json"，例如通用皮肤文件名"jjSkin-iPhone.json"，375x667尺寸皮肤文件名"jjSkin-iPhone375x667.json"，针对iPhone 5C的皮肤文件名"jjSkin-iPhone 5C.json"。其中fileNames决定框架读取皮肤文件的顺序。
  
 4. 直接获取或更新控件属性值
  
 获取和更新控件属性值，都是通过ID得到，ID是配置文件标签的路径，以点号分割，如@"R.floatValue"，@"R.textLabel.text"等，ID以"R"开头，并且不包含横屏和竖屏标签，框架会根据界面方向自动加入。
- 
+
+```objc 
 NSString *stringValue = [JJSkinManager getStringByID:@"R.stringValue"]; // "1234567890"
 CGFloat floatValue = [JJSkinManager getFloatByID:@"R.floatValue"]; // 234.9
 CGRect rect = [JJSkinManager getRectByID:@"R.rect"]; // {{5,6},{7,8}}
@@ -105,6 +110,7 @@ UILabel *label = [JJSkinManager getLabelByID:@"R.textLabel"];
 */
 UILabel *label1 = [[UILabel alloc] init];
 [JJSkinManager updateLabel:label1 withID:@"R.textLabel"];
+```
  
 # 皮肤Style
  
@@ -113,13 +119,18 @@ UILabel *label1 = [[UILabel alloc] init];
 当用户获取某一ID对应的值时，JJSkin将文件中ID对应的value转化成某一种Style（由用户决定，即调用JJSkinManager不同的API），然后由Style实现对象的生成。
  
 皮肤Style有一个公共基类JJSkinStyle，框架默认提供常用的Style，如JJLabelStyle，JJImageStyle等，用户可以定义自己的Style，需要继承JJSkinStyle，并实现如下两个方法：
+```objc
 + (id)objectFromStyle:(id)style;
 - (void)updateObject:(id)object;
+```
 然后使用JJSkinManager下面两个API获取或更新控件：
+```objc
 + (id)getObjectByID:(NSString *)id withStyleClass:(Class)styleClass;
 + (void)updateObject:(id)object withID:(NSString *)id withStyleClass:(Class)styleClass;
+```
  
 当配置文件属性使用JJCommonStyle类型，此类型的key可以是任何名字。
+```objc
 "portrait": {
         "stringValue": "1234567890”, // “stringValue”可以是任意名字
         "intergerValue": "890",
@@ -130,16 +141,20 @@ UILabel *label1 = [[UILabel alloc] init];
         "size": "{9,0}", // CGSize值格式{width,height}
         "color": "#FFc58dd0", // UIColor对应值格式#RGB或#ARGB或#RRGGBB或#AARRGGBB
     }
+```
  
 当配置文件属性使用非JJCommonStyle类型，此类型的key必须和对应Style类属性名字一致。因为框架通过运行时方法，匹配类属性名字和key，然后进行赋值。
+```objc
 "landscape": { 
         "textLabel": {// textLabel是JJLabelStyle类型
         "text": "landscape", // "text"必须和JJLabelStyle中text属性名字一直，否则赋值失败
         "textAlignment": "center",
         }
     }
+```
  
 皮肤文件中有一个status的key，当值为"finish"时，即便有部分属性值没有值，也不在继续继续查找，但不包括子Style；当值为"finishIncludeSon"时，其子Style的属性值没取完整，也不再继续查找。
+```objc
 "landscape": {
         "textLabel": { // textLabel的属性只有text和textAlignment，因为没有子style，所以不会查找portrait和其他配置文件。
         "status": "finish",
@@ -147,6 +162,7 @@ UILabel *label1 = [[UILabel alloc] init];
         "textAlignment": "center",
         }
 }
+```
 
 # 通知
 
