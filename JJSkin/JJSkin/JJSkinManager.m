@@ -59,9 +59,22 @@ extern NSString *JJSkinChangedNotification;
         self.idStyleDic = [NSMutableDictionary dictionary];
         
         self.skinConfig = [[JJSkinConfig alloc] init];
+        
+        NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+        [nc addObserver:self selector:@selector(handleMemoryWarning) name:UIApplicationDidReceiveMemoryWarningNotification object:nil];
     }
     
     return self;
+}
+
+#pragma mark - memory warning
+
+- (void)handleMemoryWarning
+{
+    @synchronized(self)
+    {
+        [self.idStyleDic removeAllObjects];
+    }
 }
 
 #pragma mark - Common Method to get style and object
@@ -290,7 +303,7 @@ extern NSString *JJSkinChangedNotification;
 
 #pragma mark - Change skin
 
-- (void)changeSkin
++ (void)changeSkin
 {
     [self removeAllStyleCache];
     
@@ -300,18 +313,40 @@ extern NSString *JJSkinChangedNotification;
 
 #pragma mark - Remove cache
 
-- (void)removeAllStyleCache
++ (void)removeAllStyleCache
 {
-    [_idStyleDic removeAllObjects];
+    JJSkinManager *skinManager = [self sharedSkinManager];
+    
+    [skinManager.idStyleDic removeAllObjects];
 }
 
-- (void)removeStyleCacheByID:(NSString *)id_
++ (void)removeStyleCacheByID:(NSString *)id_
 {
-    NSString *idKey = [id_ stringByAppendingString:[_skinConfig portraitJsonLabel]];
-    [_idStyleDic removeObjectForKey:idKey];
+    JJSkinManager *skinManager = [self sharedSkinManager];
     
-    idKey = [id_ stringByAppendingString:[_skinConfig landscapeJsonLabel]];
-    [_idStyleDic removeObjectForKey:idKey];
+    NSString *idKey = [id_ stringByAppendingString:[skinManager.skinConfig portraitJsonLabel]];
+    [skinManager.idStyleDic removeObjectForKey:idKey];
+    
+    idKey = [id_ stringByAppendingString:[skinManager.skinConfig landscapeJsonLabel]];
+    [skinManager.idStyleDic removeObjectForKey:idKey];
+}
+
++ (void)removeStyleCacheByPrefixID:(NSString *)prefixID_
+{
+    JJSkinManager *skinManager = [self sharedSkinManager];
+    
+    NSMutableDictionary *savedIDStyleDic = [NSMutableDictionary dictionary];
+    
+    [skinManager.idStyleDic enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop)
+    {
+        NSRange range = [key rangeOfString:prefixID_];
+        if (range.location != 0)
+        {
+            savedIDStyleDic[key] = obj;
+        }
+    }];
+    
+    skinManager.idStyleDic = savedIDStyleDic;
 }
 
 #pragma mark - Common

@@ -77,10 +77,11 @@
 + (UIImage *)getImageFromString:(NSString *)string;
 
 // Change skin
-- (void)changeSkin;
++ (void)changeSkin;
 
 // Remove cache
-- (void)removeAllStyleCache;
-- (void)removeStyleCacheByID:(NSString *)id;
++ (void)removeAllStyleCache;
++ (void)removeStyleCacheByID:(NSString *)id;
++ (void)removeStyleCacheByPrefixID:(NSString *)prefixID;
 
 @end

@@ -22,6 +22,9 @@ CGFloat colorComponentFrom(NSString *string, NSUInteger start, NSUInteger length
 
 + (UIColor *)colorWithHex:(NSInteger)hex
 {
+    if (hex > 0xFFFFFF || hex < -0xFFFFFF) {
+        return [UIColor colorWithHexIncludeAlpha:hex];
+    }
     return [UIColor colorWithHex:hex andAlpha:1];
 }
 
