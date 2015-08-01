@@ -291,7 +291,7 @@ extern NSString *JJSkinChangedNotification;
 
 + (UIColor *)getColorFromString:(NSString *)string
 {
-    UIColor *color = [UIColor colorWithHexString:string];
+    UIColor *color = [UIColor jj_colorWithHexString:string];
     return color;
 }
 

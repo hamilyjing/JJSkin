@@ -1,9 +1,9 @@
 //
 //  UIDevice+JJ.h
-//  JJSkin
+//  JJObjCTool
 //
 //  Created by JJ on 5/12/15.
-//  Copyright (c) 2015 JJ. All rights reserved.
+//  Copyright (c) 2015 gongjian. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -65,33 +65,56 @@ typedef NS_ENUM(NSUInteger, JJHardware)
 
 @interface UIDevice (JJ)
 
-+ (BOOL)isiPhone;
-+ (BOOL)isiPad;
+#pragma mark - Device type
 
-+ (NSString *)bundleIdentifier; // "com.jianjing.JJSkin"
-+ (NSString *)bundleShortVersion; // "5.1.4"
-+ (NSString *)bundleVersion; // "12345"
++ (BOOL)jj_isiPhone;
++ (BOOL)jj_isiPad;
 
-+ (JJHardware)hardware;
-+ (float)hardwareNumber:(JJHardware)hardware;
-+ (NSString *)platform; // 平台，"iPhone5,4"
+#pragma mark - Device orientation
+
++ (BOOL)jj_currentDeviceLandscapeOrientation;
++ (BOOL)jj_currentDevicePortraitOrientation;
++ (NSString *)jj_currentDeviceOrientationDescription;
+
++ (BOOL)jj_currentInterfaceLandscapeOrientation;
++ (BOOL)jj_currentInterfacePortraitOrientation;
++ (NSString *)jj_currentInterfaceOrientationDescription;
+
+#pragma mark - Bundle info
+
++ (NSDictionary *)jj_bundleInfoDictionary;
++ (NSString *)jj_appName;
++ (NSString *)jj_bundleIdentifier; // "com.jianjing.JJObjCTool"
++ (NSString *)jj_bundleShortVersion; // "5.1.4"
++ (NSString *)jj_bundleVersion; // "12345"
+
+#pragma mark - Hardware
+
++ (JJHardware)jj_hardware;
++ (float)jj_hardwareNumber:(JJHardware)hardware;
++ (NSString *)jj_platform; // 平台，"iPhone5,4"
 + (NSString *)jj_platformDescription; // "iPhone 4 (CDMA)"
 + (NSString*)jj_platformSimpleDescription; // "iPhone4", "iPhone4s"
+
++ (NSString *)jj_systemName; // iOS
++ (NSString *)jj_systemVersion; // iOS8.0
+
++ (NSString *)jj_macAddress; // 获取MAC地址，大写，"3C075417B5C6"
+
 /** This method returns the resolution for still image that can be received
  from back camera of the current device. Resolution returned for image oriented landscape right. **/
 + (CGSize)jj_backCameraStillImageResolutionInPixels;
 
-+ (NSString *)macAddress; // 获取MAC地址，大写，"3C075417B5C6"
++ (NSString *)jj_getSysInfoByName:(const char *)aTypeSpecifier;
 
-+ (double)realMemory; // 设备总内存
-+ (double)availableMemory; // 当前设备可用内存(单位：MB)
-+ (double)usedMemory; // 当前应用所占内存(单位：MB)
+#pragma mark - Memory
 
-+ (BOOL)isJailBreak;
++ (double)jj_realMemory; // 设备总内存
++ (double)jj_availableMemory; // 当前设备可用内存(单位：MB)
++ (double)jj_usedMemory; // 当前应用所占内存(单位：MB)
 
-+ (NSString *)getSysInfoByName:(const char *)aTypeSpecifier;
+#pragma mark - 运营商信息
 
-// 运营商信息
 + (NSString *)jj_currentRadioAccessTechnology; // 运营商的网络类型
 
 //// mobileCountryCode(MCC)和mobileNetworkCode(MNC)可以参考：http://en.wikipedia.org/wiki/Mobile_country_code
@@ -104,13 +127,8 @@ typedef NS_ENUM(NSUInteger, JJHardware)
 //// isoCountryCode使用ISO 3166-1标准，参考：http://en.wikipedia.org/wiki/ISO_3166-1
 + (NSString *)jj_isoCountryCode; // "cn"
 
-// 设备方向
-+ (BOOL)jj_currentDeviceLandscapeOrientation;
-+ (BOOL)jj_currentDevicePortraitOrientation;
-+ (NSString *)jj_currentDeviceOrientationDescription;
+#pragma mark - JailBreak
 
-+ (BOOL)jj_currentInterfaceLandscapeOrientation;
-+ (BOOL)jj_currentInterfacePortraitOrientation;
-+ (NSString *)jj_currentInterfaceOrientationDescription;
++ (BOOL)jj_isJailBreak;
 
 @end

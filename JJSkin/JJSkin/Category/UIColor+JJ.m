@@ -1,9 +1,9 @@
 //
 //  UIColor+JJ.m
-//  JJSkin
+//  JJObjCTool
 //
-//  Created by JJ on 5/11/15.
-//  Copyright (c) 2015 JJ. All rights reserved.
+//  Created by hamilyjing on 5/11/15.
+//  Copyright (c) 2015 gongjian. All rights reserved.
 //
 
 #import "UIColor+JJ.h"
@@ -20,15 +20,38 @@ CGFloat colorComponentFrom(NSString *string, NSUInteger start, NSUInteger length
 
 @implementation UIColor (JJ)
 
-+ (UIColor *)colorWithHex:(NSInteger)hex
+#pragma mark - Image
+
+- (UIImage *)jj_image
 {
-    if (hex > 0xFFFFFF || hex < -0xFFFFFF) {
-        return [UIColor colorWithHexIncludeAlpha:hex];
-    }
-    return [UIColor colorWithHex:hex andAlpha:1];
+    CGRect rect=CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
+    
+    UIGraphicsBeginImageContext(rect.size);
+    
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context, [self CGColor]);
+    CGContextFillRect(context, rect);
+    
+    UIImage *theImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    return theImage;
 }
 
-+ (UIColor *)colorWithHexIncludeAlpha:(NSInteger)hex
+#pragma mark - HEX to color
+
++ (UIColor *)jj_colorWithRGBA:(NSInteger)red green:(NSInteger)green blue:(NSInteger)blue
+{
+    return [self jj_colorWithRGBA:red green:green blue:blue alpha:1];
+}
+
++ (UIColor *)jj_colorWithRGBA:(NSInteger)red green:(NSInteger)green blue:(NSInteger)blue alpha:(NSInteger)alpha
+{
+    return [UIColor colorWithRed:red/255.0f green:green/255.0f blue:blue/255.0f alpha:alpha];
+}
+
++ (UIColor *)jj_colorWithHexIncludeAlpha:(NSInteger)hex
 {
     NSUInteger a = (hex >> 24) & 0xFF;
     NSUInteger r = (hex >> 16) & 0xFF;
@@ -37,7 +60,12 @@ CGFloat colorComponentFrom(NSString *string, NSUInteger start, NSUInteger length
     return [UIColor colorWithRed:r / 255.0f green:g / 255.0f blue:b / 255.0f alpha:a / 255.0f];
 }
 
-+ (UIColor *)colorWithHex:(NSInteger)hex andAlpha:(CGFloat)alpha
++ (UIColor *)jj_colorWithHex:(NSInteger)hex
+{
+    return [self jj_colorWithHex:hex andAlpha:1];
+}
+
++ (UIColor *)jj_colorWithHex:(NSInteger)hex andAlpha:(CGFloat)alpha
 {
     return [UIColor colorWithRed:((hex >> 16) & 0xFF)/255.0
                            green:((hex >> 8) & 0xFF)/255.0
@@ -45,7 +73,7 @@ CGFloat colorComponentFrom(NSString *string, NSUInteger start, NSUInteger length
                            alpha:alpha];
 }
 
-+ (UIColor *)colorWithHexString:(NSString *)hexString
++ (UIColor *)jj_colorWithHexString:(NSString *)hexString
 {
     CGFloat alpha, red, blue, green;
     
@@ -85,7 +113,7 @@ CGFloat colorComponentFrom(NSString *string, NSUInteger start, NSUInteger length
     return [UIColor colorWithRed:red green:green blue:blue alpha:alpha];
 }
 
-- (NSString *)HEXString
+- (NSString *)jj_hexString
 {
     UIColor* color = self;
     if (CGColorGetNumberOfComponents(color.CGColor) < 4) {
@@ -96,14 +124,16 @@ CGFloat colorComponentFrom(NSString *string, NSUInteger start, NSUInteger length
                                 alpha:components[1]];
     }
     if (CGColorSpaceGetModel(CGColorGetColorSpace(color.CGColor)) != kCGColorSpaceModelRGB) {
-        return [NSString stringWithFormat:@"#FFFFFF"];
+        return nil;
     }
     return [NSString stringWithFormat:@"#%02X%02X%02X", (int)((CGColorGetComponents(color.CGColor))[0]*255.0),
             (int)((CGColorGetComponents(color.CGColor))[1]*255.0),
             (int)((CGColorGetComponents(color.CGColor))[2]*255.0)];
 }
 
-- (BOOL)equalToAnotherColor:(UIColor *)anotherColor
+#pragma mark - Compare
+
+- (BOOL)jj_equalToAnotherColor:(UIColor *)anotherColor
 {
     return CGColorEqualToColor(self.CGColor, anotherColor.CGColor);
 }

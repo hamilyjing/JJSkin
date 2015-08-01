@@ -55,7 +55,7 @@ void jjSkinTest()
     assert(CGSizeEqualToSize(size, size1));
     //// color
     __unused UIColor *color = [JJSkinManager getColorByID:@"R.color"];
-    __unused UIColor *color1 = JJ_RGBA(0xc5, 0x8d, 0xd0, 1);
+    __unused UIColor *color1 = [UIColor jj_colorWithRGBA:0xc5 green:0xd0 blue:0xd0];
     //assert(CGColorEqualToColor(color.CGColor, color1.CGColor));
     
     // Button

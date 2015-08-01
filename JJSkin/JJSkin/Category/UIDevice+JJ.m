@@ -1,9 +1,9 @@
 //
 //  UIDevice+JJ.m
-//  JJSkin
+//  JJObjCTool
 //
 //  Created by JJ on 5/12/15.
-//  Copyright (c) 2015 JJ. All rights reserved.
+//  Copyright (c) 2015 gongjian. All rights reserved.
 //
 
 #import "UIDevice+JJ.h"
@@ -16,40 +16,107 @@
 #include <net/if_dl.h>
 #import <CoreTelephony/CTTelephonyNetworkInfo.h>
 #import <CoreTelephony/CTCarrier.h>
-#import "NSString+JJ.h"
 
 @implementation UIDevice (JJ)
 
-+ (BOOL)isiPhone
+#pragma mark - Device type
+
++ (BOOL)jj_isiPhone
 {
-    return ![UIDevice isiPad];
+    return ![UIDevice jj_isiPad];
 }
 
-+ (BOOL)isiPad
++ (BOOL)jj_isiPad
 {
     return UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad;
 }
 
-+ (NSString *)bundleIdentifier
+#pragma mark - Device orientation
+
++ (BOOL)jj_currentDeviceLandscapeOrientation
+{
+    UIDeviceOrientation deviceOrientation = [UIDevice currentDevice].orientation;
+    return UIDeviceOrientationIsLandscape(deviceOrientation);
+}
+
++ (BOOL)jj_currentDevicePortraitOrientation
+{
+    UIDeviceOrientation deviceOrientation = [UIDevice currentDevice].orientation;
+    return UIDeviceOrientationIsPortrait(deviceOrientation);
+}
+
++ (NSString *)jj_currentDeviceOrientationDescription
+{
+    UIDeviceOrientation deviceOrientation = [UIDevice currentDevice].orientation;
+    if (UIDeviceOrientationIsLandscape(deviceOrientation))
+    {
+        return @"landscape";
+    }
+    else
+    {
+        return @"portrait";
+    }
+}
+
++ (BOOL)jj_currentInterfaceLandscapeOrientation
+{
+    UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
+    return UIInterfaceOrientationIsLandscape(orientation);
+}
+
++ (BOOL)jj_currentInterfacePortraitOrientation
+{
+    UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
+    return UIInterfaceOrientationIsPortrait(orientation);
+}
+
++ (NSString *)jj_currentInterfaceOrientationDescription
+{
+    if ([self jj_currentInterfaceLandscapeOrientation])
+    {
+        return @"landscape";
+    }
+    else
+    {
+        return @"portrait";
+    }
+}
+
+#pragma mark - Bundle info
+
++ (NSDictionary *)jj_bundleInfoDictionary
+{
+    return [[NSBundle mainBundle] infoDictionary];
+}
+
++ (NSString *)jj_appName
+{
+    return [self jj_bundleInfoDictionary][@"CFBundleName"];
+}
+
++ (NSString *)jj_bundleIdentifier
 {
     NSDictionary * productInfo = [[NSBundle mainBundle] infoDictionary];
     return [productInfo objectForKey:@"CFBundleIdentifier"];
 }
 
-+ (NSString *)bundleShortVersion
++ (NSString *)jj_bundleShortVersion
 {
     NSDictionary * productInfo = [[NSBundle mainBundle] infoDictionary];
     return [productInfo objectForKey:@"CFBundleShortVersionString"];
 }
 
-+ (NSString *)bundleVersion
++ (NSString *)jj_bundleVersion
 {
     NSDictionary * productInfo = [[NSBundle mainBundle] infoDictionary];
     return [productInfo objectForKey:@"CFBundleVersion"];
 }
 
-+ (JJHardware)hardware {
-    NSString *hardware = [self platform];
+#pragma mark - Hardware
+
++ (JJHardware)jj_hardware
+{
+    NSString *hardware = [self jj_platform];
     if ([hardware isEqualToString:@"iPhone1,1"])    return IPHONE_2G;
     if ([hardware isEqualToString:@"iPhone1,2"])    return IPHONE_3G;
     if ([hardware isEqualToString:@"iPhone2,1"])    return IPHONE_3GS;
@@ -107,7 +174,7 @@
     return NOT_AVAILABLE;
 }
 
-+ (float)hardwareNumber:(JJHardware)hardware
++ (float)jj_hardwareNumber:(JJHardware)hardware
 {
     switch (hardware) {
         case IPHONE_2G:                         return 1.1f;
@@ -165,77 +232,15 @@
     return 200.0f; //Device is not available
 }
 
-+ (CGSize)jj_backCameraStillImageResolutionInPixels
++ (NSString *)jj_platform
 {
-    switch ([self hardware]) {
-        case IPHONE_2G:
-        case IPHONE_3G:
-            return CGSizeMake(1600, 1200);
-            break;
-        case IPHONE_3GS:
-            return CGSizeMake(2048, 1536);
-            break;
-        case IPHONE_4:
-        case IPHONE_4_CDMA:
-        case IPAD_3_WIFI:
-        case IPAD_3_WIFI_CDMA:
-        case IPAD_3:
-        case IPAD_4_WIFI:
-        case IPAD_4:
-        case IPAD_4_GSM_CDMA:
-            return CGSizeMake(2592, 1936);
-            break;
-        case IPHONE_4S:
-        case IPHONE_5:
-        case IPHONE_5_CDMA_GSM:
-        case IPHONE_5C:
-        case IPHONE_5C_CDMA_GSM:
-        case IPHONE_6:
-        case IPHONE_6_PLUS:
-            return CGSizeMake(3264, 2448);
-            break;
-            
-        case IPOD_TOUCH_4G:
-            return CGSizeMake(960, 720);
-            break;
-        case IPOD_TOUCH_5G:
-            return CGSizeMake(2440, 1605);
-            break;
-            
-        case IPAD_2_WIFI:
-        case IPAD_2:
-        case IPAD_2_CDMA:
-            return CGSizeMake(872, 720);
-            break;
-            
-        case IPAD_MINI_WIFI:
-        case IPAD_MINI:
-        case IPAD_MINI_WIFI_CDMA:
-            return CGSizeMake(1820, 1304);
-            break;
-            
-        case IPAD_AIR_2_WIFI:
-        case IPAD_AIR_2_WIFI_CELLULAR:
-            return CGSizeMake (1536, 2048);
-            break;
-            
-        default:
-            NSLog(@"We have no resolution for your device's camera listed in this category. Please, make photo with back camera of your device, get its resolution in pixels (via Preview Cmd+I for example) and add a comment to this repository (https://github.com/InderKumarRathore/UIDeviceUtil) on GitHub.com in format Device = Hpx x Wpx.");
-            NSLog(@"Your device is: %@", [self jj_platformDescription]);
-            break;
-    }
-    return CGSizeZero;
-}
-
-+ (NSString *)platform
-{
-    NSString *platform = [self getSysInfoByName:"hw.machine"];
+    NSString *platform = [self jj_getSysInfoByName:"hw.machine"];
     return platform;
 }
 
 + (NSString *)jj_platformDescription
 {
-    NSString *hardware = [self platform];
+    NSString *hardware = [self jj_platform];
     if ([hardware isEqualToString:@"iPhone1,1"])    return @"iPhone 2G";
     if ([hardware isEqualToString:@"iPhone1,2"])    return @"iPhone 3G";
     if ([hardware isEqualToString:@"iPhone2,1"])    return @"iPhone 3GS";
@@ -296,7 +301,7 @@
 
 + (NSString*)jj_platformSimpleDescription
 {
-    NSString *hardware = [self platform];
+    NSString *hardware = [self jj_platform];
     if ([hardware isEqualToString:@"iPhone1,1"])    return @"iPhone 2G";
     if ([hardware isEqualToString:@"iPhone1,2"])    return @"iPhone 3G";
     if ([hardware isEqualToString:@"iPhone2,1"])    return @"iPhone 3GS";
@@ -354,64 +359,17 @@
     return nil;
 }
 
-+ (NSString *)jj_mobileCountryCode
++ (NSString *)jj_systemName
 {
-    CTTelephonyNetworkInfo * netInfo = [[CTTelephonyNetworkInfo alloc] init];
-    CTCarrier * carrier = [netInfo subscriberCellularProvider];
-    return [carrier mobileCountryCode];
+    return [UIDevice currentDevice].systemName;
 }
 
-+ (NSString *)jj_mobileNetworkCode
++ (NSString *)jj_systemVersion
 {
-    CTTelephonyNetworkInfo * netInfo = [[CTTelephonyNetworkInfo alloc] init];
-    CTCarrier * carrier = [netInfo subscriberCellularProvider];
-    return [carrier mobileNetworkCode];
+    return [UIDevice currentDevice].systemVersion;
 }
 
-+ (NSString *)jj_carrierName
-{
-    CTTelephonyNetworkInfo * netInfo = [[CTTelephonyNetworkInfo alloc] init];
-    CTCarrier * carrier = [netInfo subscriberCellularProvider];
-    return carrier.carrierName;
-}
-
-+ (BOOL)jj_allowsVOIP
-{
-    CTTelephonyNetworkInfo * netInfo = [[CTTelephonyNetworkInfo alloc] init];
-    CTCarrier * carrier = [netInfo subscriberCellularProvider];
-    return carrier.allowsVOIP;
-}
-
-+ (NSString *)jj_isoCountryCode
-{
-    CTTelephonyNetworkInfo * netInfo = [[CTTelephonyNetworkInfo alloc] init];
-    CTCarrier * carrier = [netInfo subscriberCellularProvider];
-    return carrier.isoCountryCode;
-}
-
-+ (NSString *)jj_currentRadioAccessTechnology
-{
-    CTTelephonyNetworkInfo *current = [[CTTelephonyNetworkInfo alloc] init];
-    return current.currentRadioAccessTechnology;
-}
-
-+ (NSString *)getSysInfoByName:(const char *)aTypeSpecifier;
-{
-    size_t size;
-    sysctlbyname(aTypeSpecifier, NULL, &size, NULL, 0);
-    NSString * results = nil;
-    if (size > 0) {
-        char * answer = malloc(size);
-        if (answer) {
-            sysctlbyname(aTypeSpecifier, answer, &size, NULL, 0);
-            results = [NSString stringWithCString:answer encoding: NSUTF8StringEncoding];
-            free(answer);
-        }
-    }
-    return results;
-}
-
-+ (NSString *)macAddress
++ (NSString *)jj_macAddress
 {
     int 					mib[6];
     size_t              	len;
@@ -460,12 +418,92 @@
     return [outstring uppercaseString];
 }
 
-+ (double)realMemory
++ (CGSize)jj_backCameraStillImageResolutionInPixels
+{
+    switch ([self jj_hardware]) {
+        case IPHONE_2G:
+        case IPHONE_3G:
+            return CGSizeMake(1600, 1200);
+            break;
+        case IPHONE_3GS:
+            return CGSizeMake(2048, 1536);
+            break;
+        case IPHONE_4:
+        case IPHONE_4_CDMA:
+        case IPAD_3_WIFI:
+        case IPAD_3_WIFI_CDMA:
+        case IPAD_3:
+        case IPAD_4_WIFI:
+        case IPAD_4:
+        case IPAD_4_GSM_CDMA:
+            return CGSizeMake(2592, 1936);
+            break;
+        case IPHONE_4S:
+        case IPHONE_5:
+        case IPHONE_5_CDMA_GSM:
+        case IPHONE_5C:
+        case IPHONE_5C_CDMA_GSM:
+        case IPHONE_6:
+        case IPHONE_6_PLUS:
+            return CGSizeMake(3264, 2448);
+            break;
+            
+        case IPOD_TOUCH_4G:
+            return CGSizeMake(960, 720);
+            break;
+        case IPOD_TOUCH_5G:
+            return CGSizeMake(2440, 1605);
+            break;
+            
+        case IPAD_2_WIFI:
+        case IPAD_2:
+        case IPAD_2_CDMA:
+            return CGSizeMake(872, 720);
+            break;
+            
+        case IPAD_MINI_WIFI:
+        case IPAD_MINI:
+        case IPAD_MINI_WIFI_CDMA:
+            return CGSizeMake(1820, 1304);
+            break;
+            
+        case IPAD_AIR_2_WIFI:
+        case IPAD_AIR_2_WIFI_CELLULAR:
+            return CGSizeMake (1536, 2048);
+            break;
+            
+        default:
+            NSLog(@"We have no resolution for your device's camera listed in this category. Please, make photo with back camera of your device, get its resolution in pixels (via Preview Cmd+I for example) and add a comment to this repository (https://github.com/InderKumarRathore/UIDeviceUtil) on GitHub.com in format Device = Hpx x Wpx.");
+            NSLog(@"Your device is: %@", [self jj_platformDescription]);
+            break;
+    }
+    return CGSizeZero;
+}
+
++ (NSString *)jj_getSysInfoByName:(const char *)aTypeSpecifier;
+{
+    size_t size;
+    sysctlbyname(aTypeSpecifier, NULL, &size, NULL, 0);
+    NSString * results = nil;
+    if (size > 0) {
+        char * answer = malloc(size);
+        if (answer) {
+            sysctlbyname(aTypeSpecifier, answer, &size, NULL, 0);
+            results = [NSString stringWithCString:answer encoding: NSUTF8StringEncoding];
+            free(answer);
+        }
+    }
+    return results;
+}
+
+#pragma mark - Memory
+
++ (double)jj_realMemory
 {
     return [NSProcessInfo processInfo].physicalMemory / 1024.0 / 1024.0;
 }
 
-+ (double)availableMemory
++ (double)jj_availableMemory
 {
     vm_statistics_data_t vmStats;
     mach_msg_type_number_t infoCount = HOST_VM_INFO_COUNT;
@@ -480,7 +518,7 @@
     return ((vm_page_size *vmStats.free_count) / 1024.0) / 1024.0;
 }
 
-+ (double)usedMemory
++ (double)jj_usedMemory
 {
     task_basic_info_data_t taskInfo;
     mach_msg_type_number_t infoCount = TASK_BASIC_INFO_COUNT;
@@ -497,7 +535,52 @@
     return taskInfo.resident_size / 1024.0 / 1024.0;
 }
 
-+ (BOOL)isJailBreak
+#pragma mark - 运营商信息
+
++ (NSString *)jj_mobileCountryCode
+{
+    CTTelephonyNetworkInfo * netInfo = [[CTTelephonyNetworkInfo alloc] init];
+    CTCarrier * carrier = [netInfo subscriberCellularProvider];
+    return [carrier mobileCountryCode];
+}
+
++ (NSString *)jj_mobileNetworkCode
+{
+    CTTelephonyNetworkInfo * netInfo = [[CTTelephonyNetworkInfo alloc] init];
+    CTCarrier * carrier = [netInfo subscriberCellularProvider];
+    return [carrier mobileNetworkCode];
+}
+
++ (NSString *)jj_carrierName
+{
+    CTTelephonyNetworkInfo * netInfo = [[CTTelephonyNetworkInfo alloc] init];
+    CTCarrier * carrier = [netInfo subscriberCellularProvider];
+    return carrier.carrierName;
+}
+
++ (BOOL)jj_allowsVOIP
+{
+    CTTelephonyNetworkInfo * netInfo = [[CTTelephonyNetworkInfo alloc] init];
+    CTCarrier * carrier = [netInfo subscriberCellularProvider];
+    return carrier.allowsVOIP;
+}
+
++ (NSString *)jj_isoCountryCode
+{
+    CTTelephonyNetworkInfo * netInfo = [[CTTelephonyNetworkInfo alloc] init];
+    CTCarrier * carrier = [netInfo subscriberCellularProvider];
+    return carrier.isoCountryCode;
+}
+
++ (NSString *)jj_currentRadioAccessTechnology
+{
+    CTTelephonyNetworkInfo *current = [[CTTelephonyNetworkInfo alloc] init];
+    return current.currentRadioAccessTechnology;
+}
+
+#pragma mark - JailBreak
+
++ (BOOL)jj_isJailBreak
 {
     BOOL jailbroken = NO;
     NSString *cydiaPath = @"/Applications/Cydia.app";
@@ -511,55 +594,6 @@
         jailbroken = YES;
     }
     return jailbroken;
-}
-
-+ (BOOL)jj_currentDeviceLandscapeOrientation
-{
-    UIDeviceOrientation deviceOrientation = [UIDevice currentDevice].orientation;
-    return UIDeviceOrientationIsLandscape(deviceOrientation);
-}
-
-+ (BOOL)jj_currentDevicePortraitOrientation
-{
-    UIDeviceOrientation deviceOrientation = [UIDevice currentDevice].orientation;
-    return UIDeviceOrientationIsPortrait(deviceOrientation);
-}
-
-+ (NSString *)jj_currentDeviceOrientationDescription
-{
-    UIDeviceOrientation deviceOrientation = [UIDevice currentDevice].orientation;
-    if (UIDeviceOrientationIsLandscape(deviceOrientation))
-    {
-        return @"landscape";
-    }
-    else
-    {
-        return @"portrait";
-    }
-}
-
-+ (BOOL)jj_currentInterfaceLandscapeOrientation
-{
-    UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
-    return UIInterfaceOrientationIsLandscape(orientation);
-}
-
-+ (BOOL)jj_currentInterfacePortraitOrientation
-{
-    UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
-    return UIInterfaceOrientationIsPortrait(orientation);
-}
-
-+ (NSString *)jj_currentInterfaceOrientationDescription
-{
-    if ([self jj_currentInterfaceLandscapeOrientation])
-    {
-        return @"landscape";
-    }
-    else
-    {
-        return @"portrait";
-    }
 }
 
 @end
