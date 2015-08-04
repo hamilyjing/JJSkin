@@ -43,16 +43,16 @@
     }
     if (_textAlignment)
     {
-        label.textAlignment = [JJSkinManager getIntegerByID:_textAlignment];
+        label.textAlignment = [JJSkinManager getIntegerFromString:_textAlignment];
     }
     if (_lineBreakMode)
     {
-        label.lineBreakMode = [JJSkinManager getIntegerByID:_lineBreakMode];
+        label.lineBreakMode = [JJSkinManager getIntegerFromString:_lineBreakMode];
     }
     
     if (_numberOfLines)
     {
-        label.numberOfLines = [JJSkinManager getIntegerByID:_numberOfLines];
+        label.numberOfLines = [JJSkinManager getIntegerFromString:_numberOfLines];
     }
     
     if (_highlightedTextColor)

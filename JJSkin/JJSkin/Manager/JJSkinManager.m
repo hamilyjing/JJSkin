@@ -30,62 +30,66 @@
 
 extern NSString *JJSkinChangedNotification;
 
+static NSString *JJSkinChangedInnerNotification = @"JJSkinChangedInnerNotification";
+
+static NSMutableDictionary *g_s_fileContentDic;
+
 @interface JJSkinManager ()
 
-@property (nonatomic, strong) NSMutableDictionary *fileContentDic;
 @property (nonatomic, strong) NSMutableDictionary *idStyleDic;
 
 @end
 
 @implementation JJSkinManager
 
-+ (instancetype)sharedSkinManager
-{
-    static JJSkinManager *instance;
-    static dispatch_once_t t;
-    dispatch_once(&t, ^{
-        instance = [[self alloc] init];
-    });
-    
-    return instance;
-}
+#pragma mark - life cycle
 
-- (instancetype)init
+- (instancetype)initWithSkinConfig:(id<JJSkinConfig>)skinConfig_
 {
     self = [super init];
     if (self)
     {
-        self.fileContentDic = [NSMutableDictionary dictionary];
         self.idStyleDic = [NSMutableDictionary dictionary];
         
-        self.skinConfig = [[JJSkinConfig alloc] init];
+        self.skinConfig = skinConfig_;
         
         NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
-        [nc addObserver:self selector:@selector(handleMemoryWarning) name:UIApplicationDidReceiveMemoryWarningNotification object:nil];
+        [nc addObserver:self selector:@selector(handleMemoryWarningNotification:) name:UIApplicationDidReceiveMemoryWarningNotification object:nil];
+        [nc addObserver:self selector:@selector(handleSkinChangedInnerNotification:) name:JJSkinChangedInnerNotification object:nil];
     }
     
     return self;
 }
 
-#pragma mark - memory warning
-
-- (void)handleMemoryWarning
+- (instancetype)init
 {
-    @synchronized(self)
-    {
-        [self.idStyleDic removeAllObjects];
-    }
+    NSAssert(NO, @"Use initWithSkinConfig");
+    
+    return nil;
+}
+
+#pragma mark - public
+
++ (instancetype)sharedSkinManager
+{
+    static JJSkinManager *instance;
+    static dispatch_once_t t;
+    dispatch_once(&t, ^{
+        instance = [[self alloc] initWithSkinConfig:[[JJSkinConfig alloc] init]];
+    });
+    
+    return instance;
 }
 
 #pragma mark - Common Method to get style and object
 
-+ (id)getStyleByID:(NSString *)id_ withStyleClass:(Class)styleClass_
+- (id)getStyleByID:(NSString *)id_ withStyleClass:(Class)styleClass_
 {
-    id style = [[self sharedSkinManager] getStyleByID:id_ styleClass:styleClass_];
+    id style = [self getStyleByID:id_ styleClass:styleClass_];
     return style;
 }
 
-+ (id)getObjectByID:(NSString *)id_ withStyleClass:(Class)styleClass_
+- (id)getObjectByID:(NSString *)id_ withStyleClass:(Class)styleClass_
 {
     id style = [self getStyleByID:id_ withStyleClass:styleClass_];
     id object = [[style class] objectFromStyle:style];
@@ -93,167 +97,167 @@ extern NSString *JJSkinChangedNotification;
     return object;
 }
 
-+ (void)updateObject:(id)object_ withID:(NSString *)id_ withStyleClass:(Class)styleClass_
+- (void)updateObject:(id)object_ withID:(NSString *)id_ withStyleClass:(Class)styleClass_
 {
-    id style = [[self sharedSkinManager] getStyleByID:id_ styleClass:styleClass_];
+    id style = [self getStyleByID:id_ styleClass:styleClass_];
     [style updateObject:object_];
 }
 
 #pragma mark - UIFont
 
-+ (JJFontStyle *)getFontStyleByID:(NSString *)id_
+- (JJFontStyle *)getFontStyleByID:(NSString *)id_
 {
     JJFontStyle *style = [self getStyleByID:id_ withStyleClass:[JJFontStyle class]];
     return style;
 }
 
-+ (UIFont *)getFontByID:(NSString *)id_
+- (UIFont *)getFontByID:(NSString *)id_
 {
     UIFont *font = [self getObjectByID:id_ withStyleClass:[JJFontStyle class]];
     return font;
 }
 
-+ (void)updateFont:(UIFont *)font_ withID:(NSString *)id_
+- (void)updateFont:(UIFont *)font_ withID:(NSString *)id_
 {
     [self updateObject:font_ withID:id_ withStyleClass:[JJFontStyle class]];
 }
 
 #pragma mark - UIView
 
-+ (JJViewStyle *)getViewStyleByID:(NSString *)id_
+- (JJViewStyle *)getViewStyleByID:(NSString *)id_
 {
     JJViewStyle *style = [self getStyleByID:id_ withStyleClass:[JJViewStyle class]];
     return style;
 }
 
-+ (UIView *)getViewByID:(NSString *)id_
+- (UIView *)getViewByID:(NSString *)id_
 {
     UIView *view = [self getObjectByID:id_ withStyleClass:[JJViewStyle class]];
     return view;
 }
 
-+ (void)updateView:(UIView *)view_ withID:(NSString *)id_
+- (void)updateView:(UIView *)view_ withID:(NSString *)id_
 {
     [self updateObject:view_ withID:id_ withStyleClass:[JJViewStyle class]];
 }
 
 #pragma mark - Button Style
 
-+ (JJButtonStyle *)getButtonStyleByID:(NSString *)id_
+- (JJButtonStyle *)getButtonStyleByID:(NSString *)id_
 {
     JJButtonStyle *style = [self getStyleByID:id_ withStyleClass:[JJButtonStyle class]];
     return style;
 }
 
-+ (UIButton *)getButtonByID:(NSString *)id_
+- (UIButton *)getButtonByID:(NSString *)id_
 {
     UIButton *button = [self getObjectByID:id_ withStyleClass:[JJButtonStyle class]];
     return button;
 }
 
-+ (void)updateButton:(UIButton *)button_ withID:(NSString *)id_
+- (void)updateButton:(UIButton *)button_ withID:(NSString *)id_
 {
     [self updateObject:button_ withID:id_ withStyleClass:[JJButtonStyle class]];
 }
 
 #pragma mark - Image View Style
 
-+ (JJImageViewStyle *)getImageViewStyleByID:(NSString *)id_
+- (JJImageViewStyle *)getImageViewStyleByID:(NSString *)id_
 {
     JJImageViewStyle *style = [self getStyleByID:id_ withStyleClass:[JJImageViewStyle class]];
     return style;
 }
 
-+ (UIImageView *)getImageViewByID:(NSString *)id_
+- (UIImageView *)getImageViewByID:(NSString *)id_
 {
     UIImageView *imageView = [self getObjectByID:id_ withStyleClass:[JJImageViewStyle class]];
     return imageView;
 }
 
-+ (void)updateImageView:(UIImageView *)imageView_ withID:(NSString *)id_
+- (void)updateImageView:(UIImageView *)imageView_ withID:(NSString *)id_
 {
     [self updateObject:imageView_ withID:id_ withStyleClass:[JJImageViewStyle class]];
 }
 
 #pragma mark - Label Style
 
-+ (JJLabelStyle *)getLabelStyleByID:(NSString *)id_
+- (JJLabelStyle *)getLabelStyleByID:(NSString *)id_
 {
     JJLabelStyle *style = [self getStyleByID:id_ withStyleClass:[JJLabelStyle class]];
     return style;
 }
 
-+ (UILabel *)getLabelByID:(NSString *)id_
+- (UILabel *)getLabelByID:(NSString *)id_
 {
     UILabel *label = [self getObjectByID:id_ withStyleClass:[JJLabelStyle class]];
     return label;
 }
 
-+ (void)updateLabel:(UILabel *)label_ withID:(NSString *)id_
+- (void)updateLabel:(UILabel *)label_ withID:(NSString *)id_
 {
     [self updateObject:label_ withID:id_ withStyleClass:[JJLabelStyle class]];
 }
 
 #pragma mark - Common Style
 
-+ (JJCommonStyle *)getCommonStyleByID:(NSString *)id_
+- (JJCommonStyle *)getCommonStyleByID:(NSString *)id_
 {
     JJCommonStyle *style = [self getStyleByID:id_ withStyleClass:[JJCommonStyle class]];
     return style;
 }
 
-+ (NSString *)getStringByID:(NSString *)id_
+- (NSString *)getStringByID:(NSString *)id_
 {
     JJCommonStyle *style = [self getCommonStyleByID:id_];
     return style.value;
 }
 
-+ (NSInteger)getIntegerByID:(NSString *)id_
+- (NSInteger)getIntegerByID:(NSString *)id_
 {
     JJCommonStyle *style = [self getCommonStyleByID:id_];
-    NSInteger value = [self getIntegerFromString:style.value];
+    NSInteger value = [JJSkinManager getIntegerFromString:style.value];
     return value;
 }
 
-+ (CGFloat)getFloatByID:(NSString *)id_
+- (CGFloat)getFloatByID:(NSString *)id_
 {
     JJCommonStyle *style = [self getCommonStyleByID:id_];
-    CGFloat value = [self getFloatFromString:style.value];
+    CGFloat value = [JJSkinManager getFloatFromString:style.value];
     return value;
 }
 
-+ (BOOL)getBoolByID:(NSString *)id_
+- (BOOL)getBoolByID:(NSString *)id_
 {
     JJCommonStyle *style = [self getCommonStyleByID:id_];
-    BOOL value = [self getBoolFromString:style.value];
+    BOOL value = [JJSkinManager getBoolFromString:style.value];
     return value;
 }
 
-+ (UIEdgeInsets)getEdgeInsetsByID:(NSString *)id_
+- (UIEdgeInsets)getEdgeInsetsByID:(NSString *)id_
 {
     JJCommonStyle *style = [self getCommonStyleByID:id_];
-    UIEdgeInsets insets = [self getEdgeInsetsFromString:style.value];
+    UIEdgeInsets insets = [JJSkinManager getEdgeInsetsFromString:style.value];
     return insets;
 }
 
-+ (CGRect)getRectByID:(NSString *)id_
+- (CGRect)getRectByID:(NSString *)id_
 {
     JJCommonStyle *style = [self getCommonStyleByID:id_];
-    CGRect rect = [self getRectFromString:style.value];
+    CGRect rect = [JJSkinManager getRectFromString:style.value];
     return rect;
 }
 
-+ (CGSize)getSizeByID:(NSString *)id_
+- (CGSize)getSizeByID:(NSString *)id_
 {
     JJCommonStyle *style = [self getCommonStyleByID:id_];
-    CGSize size = [self getSizeFromString:style.value];
+    CGSize size = [JJSkinManager getSizeFromString:style.value];
     return size;
 }
 
-+ (UIColor *)getColorByID:(NSString *)id_
+- (UIColor *)getColorByID:(NSString *)id_
 {
     JJCommonStyle *style = [self getCommonStyleByID:id_];
-    UIColor *color = [self getColorFromString:style.value];
+    UIColor *color = [JJSkinManager getColorFromString:style.value];
     return color;
 }
 
@@ -305,39 +309,35 @@ extern NSString *JJSkinChangedNotification;
 
 + (void)changeSkin
 {
-    [self removeAllStyleCache];
+    g_s_fileContentDic = nil;
     
     NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+    [nc postNotificationName:JJSkinChangedInnerNotification object:self];
+    
     [nc postNotificationName:JJSkinChangedNotification object:self];
 }
 
 #pragma mark - Remove cache
 
-+ (void)removeAllStyleCache
+- (void)removeAllStyleCache
 {
-    JJSkinManager *skinManager = [self sharedSkinManager];
-    
-    [skinManager.idStyleDic removeAllObjects];
+    [self.idStyleDic removeAllObjects];
 }
 
-+ (void)removeStyleCacheByID:(NSString *)id_
+- (void)removeStyleCacheByID:(NSString *)id_
 {
-    JJSkinManager *skinManager = [self sharedSkinManager];
+    NSString *idKey = [id_ stringByAppendingString:[self.skinConfig portraitJsonLabel]];
+    [self.idStyleDic removeObjectForKey:idKey];
     
-    NSString *idKey = [id_ stringByAppendingString:[skinManager.skinConfig portraitJsonLabel]];
-    [skinManager.idStyleDic removeObjectForKey:idKey];
-    
-    idKey = [id_ stringByAppendingString:[skinManager.skinConfig landscapeJsonLabel]];
-    [skinManager.idStyleDic removeObjectForKey:idKey];
+    idKey = [id_ stringByAppendingString:[self.skinConfig landscapeJsonLabel]];
+    [self.idStyleDic removeObjectForKey:idKey];
 }
 
-+ (void)removeStyleCacheByPrefixID:(NSString *)prefixID_
+- (void)removeStyleCacheByPrefixID:(NSString *)prefixID_
 {
-    JJSkinManager *skinManager = [self sharedSkinManager];
-    
     NSMutableDictionary *savedIDStyleDic = [NSMutableDictionary dictionary];
     
-    [skinManager.idStyleDic enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop)
+    [self.idStyleDic enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop)
     {
         NSRange range = [key rangeOfString:prefixID_];
         if (range.location != 0)
@@ -346,10 +346,27 @@ extern NSString *JJSkinChangedNotification;
         }
     }];
     
-    skinManager.idStyleDic = savedIDStyleDic;
+    self.idStyleDic = savedIDStyleDic;
 }
 
-#pragma mark - Common
+#pragma mark - event response
+
+#pragma mark - notification
+
+- (void)handleMemoryWarningNotification:(NSNotification *)notification_
+{
+    @synchronized(self)
+    {
+        [self.idStyleDic removeAllObjects];
+    }
+}
+
+- (void)handleSkinChangedInnerNotification:(NSNotification *)notification_
+{
+    [self removeAllStyleCache];
+}
+
+#pragma mark - private
 
 - (NSArray *)idPath:(NSString *)id_
 {
@@ -373,14 +390,19 @@ extern NSString *JJSkinChangedNotification;
 
 - (NSDictionary *)getFileContent:(NSString *)fileName_
 {
-    NSDictionary *content = [_fileContentDic objectForKey:fileName_];
+    NSDictionary *content = [g_s_fileContentDic objectForKey:fileName_];
     if (!content)
     {
         content = [self fileContent:fileName_];
         
         NSAssert(content, nil);
         
-        [_fileContentDic setObject:content forKey:fileName_];
+        if (!g_s_fileContentDic)
+        {
+            g_s_fileContentDic = [NSMutableDictionary dictionary];
+        }
+        
+        [g_s_fileContentDic setObject:content forKey:fileName_];
     }
     
     return content;

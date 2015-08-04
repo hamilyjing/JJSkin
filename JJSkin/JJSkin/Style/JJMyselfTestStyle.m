@@ -17,8 +17,8 @@
     self = [super initWithFrame:frame];
     if (self)
     {
-        self.lable = [JJSkinManager getLabelByID:@"R.myselfTestView.label"];
-        self.imageView = [JJSkinManager getImageViewByID:@"R.myselfTestView.imageView"];
+        self.lable = [[JJSkinManager sharedSkinManager] getLabelByID:@"R.myselfTestView.label"];
+        self.imageView = [[JJSkinManager sharedSkinManager] getImageViewByID:@"R.myselfTestView.imageView"];
     }
     
     return self;

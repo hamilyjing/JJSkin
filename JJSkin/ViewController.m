@@ -26,7 +26,7 @@
 - (void)viewDidLayoutSubviews
 {
     [super viewDidLayoutSubviews];
-    [JJSkinManager updateLabel:_label withID:@"R.testLabel"];
+    [[JJSkinManager sharedSkinManager] updateLabel:_label withID:@"R.testLabel"];
 }
 
 - (void)viewDidLoad {

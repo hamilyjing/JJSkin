@@ -39,7 +39,7 @@
     
     if (_separatorInset)
     {
-        tableView.separatorInset = [JJSkinManager getEdgeInsetsByID:_separatorInset];
+        tableView.separatorInset = [JJSkinManager getEdgeInsetsFromString:_separatorInset];
     }
 }
 

@@ -22,11 +22,6 @@ NSString *JJSkinChangedNotification = @"JJSkinChangedNotification";
     return [self initWithFrame:CGRectZero];
 }
 
-- (instancetype)initWithCoder:(NSCoder *)aDecoder
-{
-    return [self initWithFrame:CGRectZero];
-}
-
 - (void)awakeFromNib
 {
     self.shouldRegisterSkinHandle = YES;

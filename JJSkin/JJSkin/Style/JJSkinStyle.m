@@ -142,8 +142,12 @@ NSString *JJSkinStyleStatusFinish = @"finish";
             }
             else
             {
-                NSString *styleString = [propertyAtt jj_stringBetweenTheSameString:@"\""];
-                Class class = NSClassFromString(styleString);
+                NSArray *styleStringArray = [propertyAtt jj_stringBetweenTheSameString:@"\""];
+                if ([styleStringArray count] <= 0)
+                {
+                    NSAssert(NO, @"Can not analyse property: %@", propertyAtt);
+                }
+                Class class = NSClassFromString([styleStringArray firstObject]);
                 if ([class conformsToProtocol:NSProtocolFromString(@"JJSkinStyleDelegate")])
                 {
                     value = [class styleFromContent:obj];

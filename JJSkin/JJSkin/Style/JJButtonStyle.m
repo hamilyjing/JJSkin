@@ -114,15 +114,15 @@
     // edge inserts
     if (_contentInsets)
     {
-        button.contentEdgeInsets = [JJSkinManager getEdgeInsetsByID:_contentInsets];
+        button.contentEdgeInsets = [JJSkinManager getEdgeInsetsFromString:_contentInsets];
     }
     if (_titleInsets)
     {
-        button.titleEdgeInsets = [JJSkinManager getEdgeInsetsByID:_titleInsets];
+        button.titleEdgeInsets = [JJSkinManager getEdgeInsetsFromString:_titleInsets];
     }
     if (_imageInsets)
     {
-        button.imageEdgeInsets = [JJSkinManager getEdgeInsetsByID:_imageInsets];
+        button.imageEdgeInsets = [JJSkinManager getEdgeInsetsFromString:_imageInsets];
     }
 }
 
