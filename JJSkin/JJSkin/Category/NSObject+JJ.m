@@ -123,6 +123,7 @@ void method_replace(Class toClass, Class fromClass, SEL selector)
      usingBlock:^(NSNotification *note) {
          block();
          [[NSNotificationCenter defaultCenter] removeObserver:observer];
+         observer = nil;
      }];
 }
 

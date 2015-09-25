@@ -596,4 +596,26 @@
     return jailbroken;
 }
 
+#pragma mark - Screen
+
++ (CGRect)jj_screenBounds
+{
+    return [UIScreen mainScreen].bounds;
+}
+
++ (CGSize)jj_screenSize
+{
+    return [UIScreen mainScreen].bounds.size;
+}
+
++ (CGFloat)jj_screenWidth
+{
+    return [self jj_screenSize].width;
+}
+
++ (CGFloat)jj_screenHeight
+{
+    return [self jj_screenSize].height;
+}
+
 @end

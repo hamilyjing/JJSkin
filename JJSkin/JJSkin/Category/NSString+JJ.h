@@ -58,6 +58,9 @@
 
 #pragma mark - SubString
 
+- (NSString *)jj_subStringBeforeFirstSeparator:(NSString *)separator;
+- (NSString *)jj_subStringAfterFirstSeparator:(NSString *)separator;
+
 - (NSArray *)jj_stringBetweenTheSameString:(NSString *)separator;
 
 @end

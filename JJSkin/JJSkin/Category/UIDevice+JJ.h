@@ -131,4 +131,11 @@ typedef NS_ENUM(NSUInteger, JJHardware)
 
 + (BOOL)jj_isJailBreak;
 
+#pragma mark - Screen
+
++ (CGRect)jj_screenBounds;
++ (CGSize)jj_screenSize;
++ (CGFloat)jj_screenWidth;
++ (CGFloat)jj_screenHeight;
+
 @end

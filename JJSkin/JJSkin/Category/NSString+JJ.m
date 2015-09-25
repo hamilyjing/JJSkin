@@ -196,6 +196,30 @@
 
 #pragma mark - SubString
 
+- (NSString *)jj_subStringBeforeFirstSeparator:(NSString *)separator_
+{
+    NSRange range = [self rangeOfString:separator_];
+    if (NSNotFound == range.location)
+    {
+        return nil;
+    }
+    
+    NSString *str = [self substringToIndex:range.location];
+    return str;
+}
+
+- (NSString *)jj_subStringAfterFirstSeparator:(NSString *)separator_
+{
+    NSRange range = [self rangeOfString:separator_];
+    if (NSNotFound == range.location)
+    {
+        return nil;
+    }
+    
+    NSString *str = [self substringFromIndex:range.location + range.length];
+    return str;
+}
+
 - (NSArray *)jj_stringBetweenTheSameString:(NSString *)separator
 {
     NSArray *array = [self componentsSeparatedByString:separator];
