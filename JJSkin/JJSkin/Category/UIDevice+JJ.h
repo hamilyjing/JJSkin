@@ -26,6 +26,8 @@ typedef NS_ENUM(NSUInteger, JJHardware)
     IPHONE_5S_CDMA_GSM,
     IPHONE_6_PLUS,
     IPHONE_6,
+    IPHONE_6S_PLUS,
+    IPHONE_6S,
     
     IPOD_TOUCH_1G,
     IPOD_TOUCH_2G,
@@ -133,6 +135,10 @@ typedef NS_ENUM(NSUInteger, JJHardware)
 
 #pragma mark - Screen
 
+// 弥补iPhone 6及以后设备中的“设置”->“显示与亮度”->"显示模式"对[UIScreen mainScreen].bounds.size的影响
++ (CGSize)jj_screenSizeIgnoreDisplayZoom;
+
+// below using [UIScreen mainScreen]
 + (CGRect)jj_screenBounds;
 + (CGSize)jj_screenSize;
 + (CGFloat)jj_screenWidth;

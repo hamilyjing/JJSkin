@@ -66,16 +66,7 @@
     // 后缀为屏幕尺寸的文件, "jjSkin-iPhone320x480.json"
     NSString *device = [UIDevice jj_isiPad] ? [self iPadFileNameSuffix] : [self iPhoneFileNameSuffix];
     NSString *fileName2 = [fileNamePrefix stringByAppendingString:device];
-    CGSize screenSize = [UIScreen mainScreen].bounds.size;
-    // 弥补iPhone 6和iPhone 6 Plus中的“设置”->“显示与亮度”->"显示模式"对[UIScreen mainScreen].bounds.size的影响
-    if ([[UIDevice jj_platformSimpleDescription] isEqualToString:@"iPhone 6"])
-    {
-        screenSize= CGSizeMake(375, 667);
-    }
-    else if ([[UIDevice jj_platformSimpleDescription] isEqualToString:@"iPhone 6 Plus"])
-    {
-        screenSize= CGSizeMake(414, 736);
-    }
+    CGSize screenSize = [UIDevice jj_screenSizeIgnoreDisplayZoom];
     NSString *suffix = [NSString stringWithFormat:@"%ldx%ld", (long)screenSize.width, (long)screenSize.height];
     fileName2 = [fileName2 stringByAppendingString:suffix];
     [mArray addObject:fileName2];
