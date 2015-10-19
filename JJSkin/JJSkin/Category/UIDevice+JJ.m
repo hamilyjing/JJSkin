@@ -322,6 +322,8 @@
     if ([hardware isEqualToString:@"iPhone6,2"])    return @"iPhone 5s";
     if ([hardware isEqualToString:@"iPhone7,1"])    return @"iPhone 6 Plus";
     if ([hardware isEqualToString:@"iPhone7,2"])    return @"iPhone 6";
+    if ([hardware isEqualToString:@"iPhone8,2"])    return @"iPhone 6S Plus";
+    if ([hardware isEqualToString:@"iPhone8,1"])    return @"iPhone 6S";
     
     if ([hardware isEqualToString:@"iPod1,1"])      return @"iPod Touch (1 Gen)";
     if ([hardware isEqualToString:@"iPod2,1"])      return @"iPod Touch (2 Gen)";
