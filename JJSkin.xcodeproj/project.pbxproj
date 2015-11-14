@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2828D4041BF7108D00401CC9 /* NSObject+JJSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = 2828D4031BF7108D00401CC9 /* NSObject+JJSkin.m */; };
 		7C4C92CE1B6BCB0300B1779D /* NSData+JJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4C92971B6BCB0300B1779D /* NSData+JJ.m */; };
 		7C4C92CF1B6BCB0300B1779D /* NSObject+JJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4C92991B6BCB0300B1779D /* NSObject+JJ.m */; };
 		7C4C92D01B6BCB0300B1779D /* NSString+JJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4C929B1B6BCB0300B1779D /* NSString+JJ.m */; };
@@ -56,6 +57,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2828D4021BF7108D00401CC9 /* NSObject+JJSkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JJSkin.h"; sourceTree = "<group>"; };
+		2828D4031BF7108D00401CC9 /* NSObject+JJSkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JJSkin.m"; sourceTree = "<group>"; };
 		7C4C92961B6BCB0300B1779D /* NSData+JJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+JJ.h"; sourceTree = "<group>"; };
 		7C4C92971B6BCB0300B1779D /* NSData+JJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+JJ.m"; sourceTree = "<group>"; };
 		7C4C92981B6BCB0300B1779D /* NSObject+JJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JJ.h"; sourceTree = "<group>"; };
@@ -167,6 +170,8 @@
 				7C4C92971B6BCB0300B1779D /* NSData+JJ.m */,
 				7C4C92981B6BCB0300B1779D /* NSObject+JJ.h */,
 				7C4C92991B6BCB0300B1779D /* NSObject+JJ.m */,
+				2828D4021BF7108D00401CC9 /* NSObject+JJSkin.h */,
+				2828D4031BF7108D00401CC9 /* NSObject+JJSkin.m */,
 				7C4C929A1B6BCB0300B1779D /* NSString+JJ.h */,
 				7C4C929B1B6BCB0300B1779D /* NSString+JJ.m */,
 				7C4C929C1B6BCB0300B1779D /* UIColor+JJ.h */,
@@ -433,6 +438,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2828D4041BF7108D00401CC9 /* NSObject+JJSkin.m in Sources */,
 				7C4C92ED1B6BCB0A00B1779D /* JJSkin+Test.m in Sources */,
 				7C4C92D31B6BCB0300B1779D /* JJSkinConfig.m in Sources */,
 				7C4C92DC1B6BCB0300B1779D /* JJScrollViewStyle.m in Sources */,
