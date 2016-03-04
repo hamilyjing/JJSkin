@@ -1,9 +1,9 @@
 //
 //  AppDelegate.h
-//  JJSkin
+//  JJSkinDemo
 //
-//  Created by JJ on 6/1/15.
-//  Copyright (c) 2015 JJ. All rights reserved.
+//  Created by JJ on 3/4/16.
+//  Copyright © 2016 JJ. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

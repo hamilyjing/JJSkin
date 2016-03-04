@@ -7,140 +7,105 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2828D4041BF7108D00401CC9 /* NSObject+JJSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = 2828D4031BF7108D00401CC9 /* NSObject+JJSkin.m */; };
-		7C4C92CE1B6BCB0300B1779D /* NSData+JJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4C92971B6BCB0300B1779D /* NSData+JJ.m */; };
-		7C4C92CF1B6BCB0300B1779D /* NSObject+JJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4C92991B6BCB0300B1779D /* NSObject+JJ.m */; };
-		7C4C92D01B6BCB0300B1779D /* NSString+JJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4C929B1B6BCB0300B1779D /* NSString+JJ.m */; };
-		7C4C92D11B6BCB0300B1779D /* UIColor+JJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4C929D1B6BCB0300B1779D /* UIColor+JJ.m */; };
-		7C4C92D21B6BCB0300B1779D /* UIDevice+JJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4C929F1B6BCB0300B1779D /* UIDevice+JJ.m */; };
-		7C4C92D31B6BCB0300B1779D /* JJSkinConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4C92A21B6BCB0300B1779D /* JJSkinConfig.m */; };
-		7C4C92D41B6BCB0300B1779D /* JJSkinManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4C92A61B6BCB0300B1779D /* JJSkinManager.m */; };
-		7C4C92D51B6BCB0300B1779D /* JJButtonStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4C92A91B6BCB0300B1779D /* JJButtonStyle.m */; };
-		7C4C92D61B6BCB0300B1779D /* JJCommonStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4C92AB1B6BCB0300B1779D /* JJCommonStyle.m */; };
-		7C4C92D71B6BCB0300B1779D /* JJControlStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4C92AD1B6BCB0300B1779D /* JJControlStyle.m */; };
-		7C4C92D81B6BCB0300B1779D /* JJFontStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4C92AF1B6BCB0300B1779D /* JJFontStyle.m */; };
-		7C4C92D91B6BCB0300B1779D /* JJImageViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4C92B11B6BCB0300B1779D /* JJImageViewStyle.m */; };
-		7C4C92DA1B6BCB0300B1779D /* JJLabelStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4C92B31B6BCB0300B1779D /* JJLabelStyle.m */; };
-		7C4C92DB1B6BCB0300B1779D /* JJMyselfTestStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4C92B51B6BCB0300B1779D /* JJMyselfTestStyle.m */; };
-		7C4C92DC1B6BCB0300B1779D /* JJScrollViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4C92B71B6BCB0300B1779D /* JJScrollViewStyle.m */; };
-		7C4C92DD1B6BCB0300B1779D /* JJSkinStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4C92B91B6BCB0300B1779D /* JJSkinStyle.m */; };
-		7C4C92DE1B6BCB0300B1779D /* JJTableViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4C92BD1B6BCB0300B1779D /* JJTableViewStyle.m */; };
-		7C4C92DF1B6BCB0300B1779D /* JJTextFieldStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4C92BF1B6BCB0300B1779D /* JJTextFieldStyle.m */; };
-		7C4C92E01B6BCB0300B1779D /* JJTextViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4C92C11B6BCB0300B1779D /* JJTextViewStyle.m */; };
-		7C4C92E11B6BCB0300B1779D /* JJViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4C92C31B6BCB0300B1779D /* JJViewStyle.m */; };
-		7C4C92E21B6BCB0300B1779D /* JJSkinView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4C92C71B6BCB0300B1779D /* JJSkinView.m */; };
-		7C4C92E31B6BCB0300B1779D /* JJSkinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4C92C91B6BCB0300B1779D /* JJSkinViewController.m */; };
-		7C4C92E41B6BCB0300B1779D /* UIView+JJSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4C92CB1B6BCB0300B1779D /* UIView+JJSkin.m */; };
-		7C4C92E51B6BCB0300B1779D /* UIViewController+JJSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4C92CD1B6BCB0300B1779D /* UIViewController+JJSkin.m */; };
-		7C4C92ED1B6BCB0A00B1779D /* JJSkin+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4C92E81B6BCB0A00B1779D /* JJSkin+Test.m */; };
-		7C4C92EE1B6BCB0A00B1779D /* jjSkin-iPhone 5C.json in Resources */ = {isa = PBXBuildFile; fileRef = 7C4C92E91B6BCB0A00B1779D /* jjSkin-iPhone 5C.json */; };
-		7C4C92EF1B6BCB0A00B1779D /* jjSkin-iPhone.json in Resources */ = {isa = PBXBuildFile; fileRef = 7C4C92EA1B6BCB0A00B1779D /* jjSkin-iPhone.json */; };
-		7C4C92F01B6BCB0A00B1779D /* jjSkin-iPhone320x568.json in Resources */ = {isa = PBXBuildFile; fileRef = 7C4C92EB1B6BCB0A00B1779D /* jjSkin-iPhone320x568.json */; };
-		7C4C92F11B6BCB0A00B1779D /* jjSkin-iPhone375x667.json in Resources */ = {isa = PBXBuildFile; fileRef = 7C4C92EC1B6BCB0A00B1779D /* jjSkin-iPhone375x667.json */; };
-		A1FDCF721B1C417B00090407 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FDCF711B1C417B00090407 /* main.m */; };
-		A1FDCF751B1C417B00090407 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FDCF741B1C417B00090407 /* AppDelegate.m */; };
-		A1FDCF781B1C417B00090407 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FDCF771B1C417B00090407 /* ViewController.m */; };
-		A1FDCF7B1B1C417B00090407 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1FDCF791B1C417B00090407 /* Main.storyboard */; };
-		A1FDCF7D1B1C417B00090407 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1FDCF7C1B1C417B00090407 /* Images.xcassets */; };
-		A1FDCF801B1C417B00090407 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1FDCF7E1B1C417B00090407 /* LaunchScreen.xib */; };
-		A1FDCF8C1B1C417B00090407 /* JJSkinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FDCF8B1B1C417B00090407 /* JJSkinTests.m */; };
+		28ADAB5D1C8934EF00C1F2D2 /* NSData+JJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ADAB241C8934EF00C1F2D2 /* NSData+JJ.m */; };
+		28ADAB5E1C8934EF00C1F2D2 /* NSObject+JJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ADAB261C8934EF00C1F2D2 /* NSObject+JJ.m */; };
+		28ADAB5F1C8934EF00C1F2D2 /* NSObject+JJSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ADAB281C8934EF00C1F2D2 /* NSObject+JJSkin.m */; };
+		28ADAB601C8934EF00C1F2D2 /* NSString+JJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ADAB2A1C8934EF00C1F2D2 /* NSString+JJ.m */; };
+		28ADAB611C8934EF00C1F2D2 /* UIColor+JJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ADAB2C1C8934EF00C1F2D2 /* UIColor+JJ.m */; };
+		28ADAB621C8934EF00C1F2D2 /* UIDevice+JJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ADAB2E1C8934EF00C1F2D2 /* UIDevice+JJ.m */; };
+		28ADAB631C8934EF00C1F2D2 /* JJSkinConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ADAB311C8934EF00C1F2D2 /* JJSkinConfig.m */; };
+		28ADAB641C8934EF00C1F2D2 /* JJSkinManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ADAB351C8934EF00C1F2D2 /* JJSkinManager.m */; };
+		28ADAB651C8934EF00C1F2D2 /* JJButtonStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ADAB381C8934EF00C1F2D2 /* JJButtonStyle.m */; };
+		28ADAB661C8934EF00C1F2D2 /* JJCommonStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ADAB3A1C8934EF00C1F2D2 /* JJCommonStyle.m */; };
+		28ADAB671C8934EF00C1F2D2 /* JJControlStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ADAB3C1C8934EF00C1F2D2 /* JJControlStyle.m */; };
+		28ADAB681C8934EF00C1F2D2 /* JJFontStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ADAB3E1C8934EF00C1F2D2 /* JJFontStyle.m */; };
+		28ADAB691C8934EF00C1F2D2 /* JJImageViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ADAB401C8934EF00C1F2D2 /* JJImageViewStyle.m */; };
+		28ADAB6A1C8934EF00C1F2D2 /* JJLabelStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ADAB421C8934EF00C1F2D2 /* JJLabelStyle.m */; };
+		28ADAB6B1C8934EF00C1F2D2 /* JJMyselfTestStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ADAB441C8934EF00C1F2D2 /* JJMyselfTestStyle.m */; };
+		28ADAB6C1C8934EF00C1F2D2 /* JJScrollViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ADAB461C8934EF00C1F2D2 /* JJScrollViewStyle.m */; };
+		28ADAB6D1C8934EF00C1F2D2 /* JJSkinStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ADAB481C8934EF00C1F2D2 /* JJSkinStyle.m */; };
+		28ADAB6E1C8934EF00C1F2D2 /* JJTableViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ADAB4C1C8934EF00C1F2D2 /* JJTableViewStyle.m */; };
+		28ADAB6F1C8934EF00C1F2D2 /* JJTextFieldStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ADAB4E1C8934EF00C1F2D2 /* JJTextFieldStyle.m */; };
+		28ADAB701C8934EF00C1F2D2 /* JJTextViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ADAB501C8934EF00C1F2D2 /* JJTextViewStyle.m */; };
+		28ADAB711C8934EF00C1F2D2 /* JJViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ADAB521C8934EF00C1F2D2 /* JJViewStyle.m */; };
+		28ADAB721C8934EF00C1F2D2 /* JJSkinView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ADAB561C8934EF00C1F2D2 /* JJSkinView.m */; };
+		28ADAB731C8934EF00C1F2D2 /* JJSkinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ADAB581C8934EF00C1F2D2 /* JJSkinViewController.m */; };
+		28ADAB741C8934EF00C1F2D2 /* UIView+JJSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ADAB5A1C8934EF00C1F2D2 /* UIView+JJSkin.m */; };
+		28ADAB751C8934EF00C1F2D2 /* UIViewController+JJSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ADAB5C1C8934EF00C1F2D2 /* UIViewController+JJSkin.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		A1FDCF861B1C417B00090407 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A1FDCF641B1C417B00090407 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A1FDCF6B1B1C417B00090407;
-			remoteInfo = JJSkin;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		2828D4021BF7108D00401CC9 /* NSObject+JJSkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JJSkin.h"; sourceTree = "<group>"; };
-		2828D4031BF7108D00401CC9 /* NSObject+JJSkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JJSkin.m"; sourceTree = "<group>"; };
-		7C4C92961B6BCB0300B1779D /* NSData+JJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+JJ.h"; sourceTree = "<group>"; };
-		7C4C92971B6BCB0300B1779D /* NSData+JJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+JJ.m"; sourceTree = "<group>"; };
-		7C4C92981B6BCB0300B1779D /* NSObject+JJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JJ.h"; sourceTree = "<group>"; };
-		7C4C92991B6BCB0300B1779D /* NSObject+JJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JJ.m"; sourceTree = "<group>"; };
-		7C4C929A1B6BCB0300B1779D /* NSString+JJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JJ.h"; sourceTree = "<group>"; };
-		7C4C929B1B6BCB0300B1779D /* NSString+JJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JJ.m"; sourceTree = "<group>"; };
-		7C4C929C1B6BCB0300B1779D /* UIColor+JJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+JJ.h"; sourceTree = "<group>"; };
-		7C4C929D1B6BCB0300B1779D /* UIColor+JJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JJ.m"; sourceTree = "<group>"; };
-		7C4C929E1B6BCB0300B1779D /* UIDevice+JJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+JJ.h"; sourceTree = "<group>"; };
-		7C4C929F1B6BCB0300B1779D /* UIDevice+JJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+JJ.m"; sourceTree = "<group>"; };
-		7C4C92A11B6BCB0300B1779D /* JJSkinConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJSkinConfig.h; sourceTree = "<group>"; };
-		7C4C92A21B6BCB0300B1779D /* JJSkinConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJSkinConfig.m; sourceTree = "<group>"; };
-		7C4C92A31B6BCB0300B1779D /* JJSkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJSkin.h; sourceTree = "<group>"; };
-		7C4C92A51B6BCB0300B1779D /* JJSkinManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJSkinManager.h; sourceTree = "<group>"; };
-		7C4C92A61B6BCB0300B1779D /* JJSkinManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJSkinManager.m; sourceTree = "<group>"; };
-		7C4C92A81B6BCB0300B1779D /* JJButtonStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJButtonStyle.h; sourceTree = "<group>"; };
-		7C4C92A91B6BCB0300B1779D /* JJButtonStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJButtonStyle.m; sourceTree = "<group>"; };
-		7C4C92AA1B6BCB0300B1779D /* JJCommonStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJCommonStyle.h; sourceTree = "<group>"; };
-		7C4C92AB1B6BCB0300B1779D /* JJCommonStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJCommonStyle.m; sourceTree = "<group>"; };
-		7C4C92AC1B6BCB0300B1779D /* JJControlStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJControlStyle.h; sourceTree = "<group>"; };
-		7C4C92AD1B6BCB0300B1779D /* JJControlStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJControlStyle.m; sourceTree = "<group>"; };
-		7C4C92AE1B6BCB0300B1779D /* JJFontStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJFontStyle.h; sourceTree = "<group>"; };
-		7C4C92AF1B6BCB0300B1779D /* JJFontStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJFontStyle.m; sourceTree = "<group>"; };
-		7C4C92B01B6BCB0300B1779D /* JJImageViewStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJImageViewStyle.h; sourceTree = "<group>"; };
-		7C4C92B11B6BCB0300B1779D /* JJImageViewStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJImageViewStyle.m; sourceTree = "<group>"; };
-		7C4C92B21B6BCB0300B1779D /* JJLabelStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJLabelStyle.h; sourceTree = "<group>"; };
-		7C4C92B31B6BCB0300B1779D /* JJLabelStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJLabelStyle.m; sourceTree = "<group>"; };
-		7C4C92B41B6BCB0300B1779D /* JJMyselfTestStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJMyselfTestStyle.h; sourceTree = "<group>"; };
-		7C4C92B51B6BCB0300B1779D /* JJMyselfTestStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJMyselfTestStyle.m; sourceTree = "<group>"; };
-		7C4C92B61B6BCB0300B1779D /* JJScrollViewStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJScrollViewStyle.h; sourceTree = "<group>"; };
-		7C4C92B71B6BCB0300B1779D /* JJScrollViewStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJScrollViewStyle.m; sourceTree = "<group>"; };
-		7C4C92B81B6BCB0300B1779D /* JJSkinStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJSkinStyle.h; sourceTree = "<group>"; };
-		7C4C92B91B6BCB0300B1779D /* JJSkinStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJSkinStyle.m; sourceTree = "<group>"; };
-		7C4C92BA1B6BCB0300B1779D /* JJSkinStyleDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJSkinStyleDataSource.h; sourceTree = "<group>"; };
-		7C4C92BB1B6BCB0300B1779D /* JJSkinStyleDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJSkinStyleDelegate.h; sourceTree = "<group>"; };
-		7C4C92BC1B6BCB0300B1779D /* JJTableViewStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJTableViewStyle.h; sourceTree = "<group>"; };
-		7C4C92BD1B6BCB0300B1779D /* JJTableViewStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJTableViewStyle.m; sourceTree = "<group>"; };
-		7C4C92BE1B6BCB0300B1779D /* JJTextFieldStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJTextFieldStyle.h; sourceTree = "<group>"; };
-		7C4C92BF1B6BCB0300B1779D /* JJTextFieldStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJTextFieldStyle.m; sourceTree = "<group>"; };
-		7C4C92C01B6BCB0300B1779D /* JJTextViewStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJTextViewStyle.h; sourceTree = "<group>"; };
-		7C4C92C11B6BCB0300B1779D /* JJTextViewStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJTextViewStyle.m; sourceTree = "<group>"; };
-		7C4C92C21B6BCB0300B1779D /* JJViewStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJViewStyle.h; sourceTree = "<group>"; };
-		7C4C92C31B6BCB0300B1779D /* JJViewStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJViewStyle.m; sourceTree = "<group>"; };
-		7C4C92C51B6BCB0300B1779D /* JJSkinHandleDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJSkinHandleDelegate.h; sourceTree = "<group>"; };
-		7C4C92C61B6BCB0300B1779D /* JJSkinView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJSkinView.h; sourceTree = "<group>"; };
-		7C4C92C71B6BCB0300B1779D /* JJSkinView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJSkinView.m; sourceTree = "<group>"; };
-		7C4C92C81B6BCB0300B1779D /* JJSkinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJSkinViewController.h; sourceTree = "<group>"; };
-		7C4C92C91B6BCB0300B1779D /* JJSkinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJSkinViewController.m; sourceTree = "<group>"; };
-		7C4C92CA1B6BCB0300B1779D /* UIView+JJSkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JJSkin.h"; sourceTree = "<group>"; };
-		7C4C92CB1B6BCB0300B1779D /* UIView+JJSkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JJSkin.m"; sourceTree = "<group>"; };
-		7C4C92CC1B6BCB0300B1779D /* UIViewController+JJSkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JJSkin.h"; sourceTree = "<group>"; };
-		7C4C92CD1B6BCB0300B1779D /* UIViewController+JJSkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JJSkin.m"; sourceTree = "<group>"; };
-		7C4C92E71B6BCB0A00B1779D /* JJSkin+Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JJSkin+Test.h"; sourceTree = "<group>"; };
-		7C4C92E81B6BCB0A00B1779D /* JJSkin+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JJSkin+Test.m"; sourceTree = "<group>"; };
-		7C4C92E91B6BCB0A00B1779D /* jjSkin-iPhone 5C.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "jjSkin-iPhone 5C.json"; sourceTree = "<group>"; };
-		7C4C92EA1B6BCB0A00B1779D /* jjSkin-iPhone.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "jjSkin-iPhone.json"; sourceTree = "<group>"; };
-		7C4C92EB1B6BCB0A00B1779D /* jjSkin-iPhone320x568.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "jjSkin-iPhone320x568.json"; sourceTree = "<group>"; };
-		7C4C92EC1B6BCB0A00B1779D /* jjSkin-iPhone375x667.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "jjSkin-iPhone375x667.json"; sourceTree = "<group>"; };
-		A1FDCF6C1B1C417B00090407 /* JJSkin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JJSkin.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A1FDCF701B1C417B00090407 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A1FDCF711B1C417B00090407 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A1FDCF731B1C417B00090407 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		A1FDCF741B1C417B00090407 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A1FDCF761B1C417B00090407 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A1FDCF771B1C417B00090407 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		A1FDCF7A1B1C417B00090407 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A1FDCF7C1B1C417B00090407 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		A1FDCF7F1B1C417B00090407 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		A1FDCF851B1C417B00090407 /* JJSkinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JJSkinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A1FDCF8A1B1C417B00090407 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A1FDCF8B1B1C417B00090407 /* JJSkinTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJSkinTests.m; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		A1FDCF691B1C417B00090407 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
+/* Begin PBXCopyFilesBuildPhase section */
+		28ADAB131C8934B400C1F2D2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A1FDCF821B1C417B00090407 /* Frameworks */ = {
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		28ADAB151C8934B400C1F2D2 /* libJJSkin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJJSkin.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		28ADAB231C8934EF00C1F2D2 /* NSData+JJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+JJ.h"; sourceTree = "<group>"; };
+		28ADAB241C8934EF00C1F2D2 /* NSData+JJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+JJ.m"; sourceTree = "<group>"; };
+		28ADAB251C8934EF00C1F2D2 /* NSObject+JJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JJ.h"; sourceTree = "<group>"; };
+		28ADAB261C8934EF00C1F2D2 /* NSObject+JJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JJ.m"; sourceTree = "<group>"; };
+		28ADAB271C8934EF00C1F2D2 /* NSObject+JJSkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JJSkin.h"; sourceTree = "<group>"; };
+		28ADAB281C8934EF00C1F2D2 /* NSObject+JJSkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JJSkin.m"; sourceTree = "<group>"; };
+		28ADAB291C8934EF00C1F2D2 /* NSString+JJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JJ.h"; sourceTree = "<group>"; };
+		28ADAB2A1C8934EF00C1F2D2 /* NSString+JJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JJ.m"; sourceTree = "<group>"; };
+		28ADAB2B1C8934EF00C1F2D2 /* UIColor+JJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+JJ.h"; sourceTree = "<group>"; };
+		28ADAB2C1C8934EF00C1F2D2 /* UIColor+JJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JJ.m"; sourceTree = "<group>"; };
+		28ADAB2D1C8934EF00C1F2D2 /* UIDevice+JJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+JJ.h"; sourceTree = "<group>"; };
+		28ADAB2E1C8934EF00C1F2D2 /* UIDevice+JJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+JJ.m"; sourceTree = "<group>"; };
+		28ADAB301C8934EF00C1F2D2 /* JJSkinConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJSkinConfig.h; sourceTree = "<group>"; };
+		28ADAB311C8934EF00C1F2D2 /* JJSkinConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJSkinConfig.m; sourceTree = "<group>"; };
+		28ADAB321C8934EF00C1F2D2 /* JJSkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJSkin.h; sourceTree = "<group>"; };
+		28ADAB341C8934EF00C1F2D2 /* JJSkinManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJSkinManager.h; sourceTree = "<group>"; };
+		28ADAB351C8934EF00C1F2D2 /* JJSkinManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJSkinManager.m; sourceTree = "<group>"; };
+		28ADAB371C8934EF00C1F2D2 /* JJButtonStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJButtonStyle.h; sourceTree = "<group>"; };
+		28ADAB381C8934EF00C1F2D2 /* JJButtonStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJButtonStyle.m; sourceTree = "<group>"; };
+		28ADAB391C8934EF00C1F2D2 /* JJCommonStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJCommonStyle.h; sourceTree = "<group>"; };
+		28ADAB3A1C8934EF00C1F2D2 /* JJCommonStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJCommonStyle.m; sourceTree = "<group>"; };
+		28ADAB3B1C8934EF00C1F2D2 /* JJControlStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJControlStyle.h; sourceTree = "<group>"; };
+		28ADAB3C1C8934EF00C1F2D2 /* JJControlStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJControlStyle.m; sourceTree = "<group>"; };
+		28ADAB3D1C8934EF00C1F2D2 /* JJFontStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJFontStyle.h; sourceTree = "<group>"; };
+		28ADAB3E1C8934EF00C1F2D2 /* JJFontStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJFontStyle.m; sourceTree = "<group>"; };
+		28ADAB3F1C8934EF00C1F2D2 /* JJImageViewStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJImageViewStyle.h; sourceTree = "<group>"; };
+		28ADAB401C8934EF00C1F2D2 /* JJImageViewStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJImageViewStyle.m; sourceTree = "<group>"; };
+		28ADAB411C8934EF00C1F2D2 /* JJLabelStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJLabelStyle.h; sourceTree = "<group>"; };
+		28ADAB421C8934EF00C1F2D2 /* JJLabelStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJLabelStyle.m; sourceTree = "<group>"; };
+		28ADAB431C8934EF00C1F2D2 /* JJMyselfTestStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJMyselfTestStyle.h; sourceTree = "<group>"; };
+		28ADAB441C8934EF00C1F2D2 /* JJMyselfTestStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJMyselfTestStyle.m; sourceTree = "<group>"; };
+		28ADAB451C8934EF00C1F2D2 /* JJScrollViewStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJScrollViewStyle.h; sourceTree = "<group>"; };
+		28ADAB461C8934EF00C1F2D2 /* JJScrollViewStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJScrollViewStyle.m; sourceTree = "<group>"; };
+		28ADAB471C8934EF00C1F2D2 /* JJSkinStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJSkinStyle.h; sourceTree = "<group>"; };
+		28ADAB481C8934EF00C1F2D2 /* JJSkinStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJSkinStyle.m; sourceTree = "<group>"; };
+		28ADAB491C8934EF00C1F2D2 /* JJSkinStyleDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJSkinStyleDataSource.h; sourceTree = "<group>"; };
+		28ADAB4A1C8934EF00C1F2D2 /* JJSkinStyleDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJSkinStyleDelegate.h; sourceTree = "<group>"; };
+		28ADAB4B1C8934EF00C1F2D2 /* JJTableViewStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJTableViewStyle.h; sourceTree = "<group>"; };
+		28ADAB4C1C8934EF00C1F2D2 /* JJTableViewStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJTableViewStyle.m; sourceTree = "<group>"; };
+		28ADAB4D1C8934EF00C1F2D2 /* JJTextFieldStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJTextFieldStyle.h; sourceTree = "<group>"; };
+		28ADAB4E1C8934EF00C1F2D2 /* JJTextFieldStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJTextFieldStyle.m; sourceTree = "<group>"; };
+		28ADAB4F1C8934EF00C1F2D2 /* JJTextViewStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJTextViewStyle.h; sourceTree = "<group>"; };
+		28ADAB501C8934EF00C1F2D2 /* JJTextViewStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJTextViewStyle.m; sourceTree = "<group>"; };
+		28ADAB511C8934EF00C1F2D2 /* JJViewStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJViewStyle.h; sourceTree = "<group>"; };
+		28ADAB521C8934EF00C1F2D2 /* JJViewStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJViewStyle.m; sourceTree = "<group>"; };
+		28ADAB541C8934EF00C1F2D2 /* JJSkinHandleDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJSkinHandleDelegate.h; sourceTree = "<group>"; };
+		28ADAB551C8934EF00C1F2D2 /* JJSkinView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJSkinView.h; sourceTree = "<group>"; };
+		28ADAB561C8934EF00C1F2D2 /* JJSkinView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJSkinView.m; sourceTree = "<group>"; };
+		28ADAB571C8934EF00C1F2D2 /* JJSkinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJSkinViewController.h; sourceTree = "<group>"; };
+		28ADAB581C8934EF00C1F2D2 /* JJSkinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJSkinViewController.m; sourceTree = "<group>"; };
+		28ADAB591C8934EF00C1F2D2 /* UIView+JJSkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JJSkin.h"; sourceTree = "<group>"; };
+		28ADAB5A1C8934EF00C1F2D2 /* UIView+JJSkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JJSkin.m"; sourceTree = "<group>"; };
+		28ADAB5B1C8934EF00C1F2D2 /* UIViewController+JJSkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JJSkin.h"; sourceTree = "<group>"; };
+		28ADAB5C1C8934EF00C1F2D2 /* UIViewController+JJSkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JJSkin.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		28ADAB121C8934B400C1F2D2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -150,200 +115,133 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7C4C92941B6BCB0300B1779D /* JJSkin */ = {
+		28ADAB0C1C8934B400C1F2D2 = {
 			isa = PBXGroup;
 			children = (
-				7C4C92951B6BCB0300B1779D /* Category */,
-				7C4C92A01B6BCB0300B1779D /* Config */,
-				7C4C92A31B6BCB0300B1779D /* JJSkin.h */,
-				7C4C92A41B6BCB0300B1779D /* Manager */,
-				7C4C92A71B6BCB0300B1779D /* Style */,
-				7C4C92C41B6BCB0300B1779D /* View */,
-			);
-			path = JJSkin;
-			sourceTree = "<group>";
-		};
-		7C4C92951B6BCB0300B1779D /* Category */ = {
-			isa = PBXGroup;
-			children = (
-				7C4C92961B6BCB0300B1779D /* NSData+JJ.h */,
-				7C4C92971B6BCB0300B1779D /* NSData+JJ.m */,
-				7C4C92981B6BCB0300B1779D /* NSObject+JJ.h */,
-				7C4C92991B6BCB0300B1779D /* NSObject+JJ.m */,
-				2828D4021BF7108D00401CC9 /* NSObject+JJSkin.h */,
-				2828D4031BF7108D00401CC9 /* NSObject+JJSkin.m */,
-				7C4C929A1B6BCB0300B1779D /* NSString+JJ.h */,
-				7C4C929B1B6BCB0300B1779D /* NSString+JJ.m */,
-				7C4C929C1B6BCB0300B1779D /* UIColor+JJ.h */,
-				7C4C929D1B6BCB0300B1779D /* UIColor+JJ.m */,
-				7C4C929E1B6BCB0300B1779D /* UIDevice+JJ.h */,
-				7C4C929F1B6BCB0300B1779D /* UIDevice+JJ.m */,
-			);
-			path = Category;
-			sourceTree = "<group>";
-		};
-		7C4C92A01B6BCB0300B1779D /* Config */ = {
-			isa = PBXGroup;
-			children = (
-				7C4C92A11B6BCB0300B1779D /* JJSkinConfig.h */,
-				7C4C92A21B6BCB0300B1779D /* JJSkinConfig.m */,
-			);
-			path = Config;
-			sourceTree = "<group>";
-		};
-		7C4C92A41B6BCB0300B1779D /* Manager */ = {
-			isa = PBXGroup;
-			children = (
-				7C4C92A51B6BCB0300B1779D /* JJSkinManager.h */,
-				7C4C92A61B6BCB0300B1779D /* JJSkinManager.m */,
-			);
-			path = Manager;
-			sourceTree = "<group>";
-		};
-		7C4C92A71B6BCB0300B1779D /* Style */ = {
-			isa = PBXGroup;
-			children = (
-				7C4C92A81B6BCB0300B1779D /* JJButtonStyle.h */,
-				7C4C92A91B6BCB0300B1779D /* JJButtonStyle.m */,
-				7C4C92AA1B6BCB0300B1779D /* JJCommonStyle.h */,
-				7C4C92AB1B6BCB0300B1779D /* JJCommonStyle.m */,
-				7C4C92AC1B6BCB0300B1779D /* JJControlStyle.h */,
-				7C4C92AD1B6BCB0300B1779D /* JJControlStyle.m */,
-				7C4C92AE1B6BCB0300B1779D /* JJFontStyle.h */,
-				7C4C92AF1B6BCB0300B1779D /* JJFontStyle.m */,
-				7C4C92B01B6BCB0300B1779D /* JJImageViewStyle.h */,
-				7C4C92B11B6BCB0300B1779D /* JJImageViewStyle.m */,
-				7C4C92B21B6BCB0300B1779D /* JJLabelStyle.h */,
-				7C4C92B31B6BCB0300B1779D /* JJLabelStyle.m */,
-				7C4C92B41B6BCB0300B1779D /* JJMyselfTestStyle.h */,
-				7C4C92B51B6BCB0300B1779D /* JJMyselfTestStyle.m */,
-				7C4C92B61B6BCB0300B1779D /* JJScrollViewStyle.h */,
-				7C4C92B71B6BCB0300B1779D /* JJScrollViewStyle.m */,
-				7C4C92B81B6BCB0300B1779D /* JJSkinStyle.h */,
-				7C4C92B91B6BCB0300B1779D /* JJSkinStyle.m */,
-				7C4C92BA1B6BCB0300B1779D /* JJSkinStyleDataSource.h */,
-				7C4C92BB1B6BCB0300B1779D /* JJSkinStyleDelegate.h */,
-				7C4C92BC1B6BCB0300B1779D /* JJTableViewStyle.h */,
-				7C4C92BD1B6BCB0300B1779D /* JJTableViewStyle.m */,
-				7C4C92BE1B6BCB0300B1779D /* JJTextFieldStyle.h */,
-				7C4C92BF1B6BCB0300B1779D /* JJTextFieldStyle.m */,
-				7C4C92C01B6BCB0300B1779D /* JJTextViewStyle.h */,
-				7C4C92C11B6BCB0300B1779D /* JJTextViewStyle.m */,
-				7C4C92C21B6BCB0300B1779D /* JJViewStyle.h */,
-				7C4C92C31B6BCB0300B1779D /* JJViewStyle.m */,
-			);
-			path = Style;
-			sourceTree = "<group>";
-		};
-		7C4C92C41B6BCB0300B1779D /* View */ = {
-			isa = PBXGroup;
-			children = (
-				7C4C92C51B6BCB0300B1779D /* JJSkinHandleDelegate.h */,
-				7C4C92C61B6BCB0300B1779D /* JJSkinView.h */,
-				7C4C92C71B6BCB0300B1779D /* JJSkinView.m */,
-				7C4C92C81B6BCB0300B1779D /* JJSkinViewController.h */,
-				7C4C92C91B6BCB0300B1779D /* JJSkinViewController.m */,
-				7C4C92CA1B6BCB0300B1779D /* UIView+JJSkin.h */,
-				7C4C92CB1B6BCB0300B1779D /* UIView+JJSkin.m */,
-				7C4C92CC1B6BCB0300B1779D /* UIViewController+JJSkin.h */,
-				7C4C92CD1B6BCB0300B1779D /* UIViewController+JJSkin.m */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		7C4C92E61B6BCB0A00B1779D /* JJSkinTest */ = {
-			isa = PBXGroup;
-			children = (
-				7C4C92E71B6BCB0A00B1779D /* JJSkin+Test.h */,
-				7C4C92E81B6BCB0A00B1779D /* JJSkin+Test.m */,
-				7C4C92E91B6BCB0A00B1779D /* jjSkin-iPhone 5C.json */,
-				7C4C92EA1B6BCB0A00B1779D /* jjSkin-iPhone.json */,
-				7C4C92EB1B6BCB0A00B1779D /* jjSkin-iPhone320x568.json */,
-				7C4C92EC1B6BCB0A00B1779D /* jjSkin-iPhone375x667.json */,
-			);
-			name = JJSkinTest;
-			path = JJSkin/JJSkinTest;
-			sourceTree = SOURCE_ROOT;
-		};
-		A1FDCF631B1C417B00090407 = {
-			isa = PBXGroup;
-			children = (
-				A1FDCF6E1B1C417B00090407 /* JJSkin */,
-				A1FDCF881B1C417B00090407 /* JJSkinTests */,
-				A1FDCF6D1B1C417B00090407 /* Products */,
+				28ADAB211C8934EF00C1F2D2 /* JJSkin */,
+				28ADAB161C8934B400C1F2D2 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		A1FDCF6D1B1C417B00090407 /* Products */ = {
+		28ADAB161C8934B400C1F2D2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A1FDCF6C1B1C417B00090407 /* JJSkin.app */,
-				A1FDCF851B1C417B00090407 /* JJSkinTests.xctest */,
+				28ADAB151C8934B400C1F2D2 /* libJJSkin.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A1FDCF6E1B1C417B00090407 /* JJSkin */ = {
+		28ADAB211C8934EF00C1F2D2 /* JJSkin */ = {
 			isa = PBXGroup;
 			children = (
-				A1FDCFD31B1C648D00090407 /* API */,
-				A1FDCF731B1C417B00090407 /* AppDelegate.h */,
-				A1FDCF741B1C417B00090407 /* AppDelegate.m */,
-				A1FDCF761B1C417B00090407 /* ViewController.h */,
-				A1FDCF771B1C417B00090407 /* ViewController.m */,
-				A1FDCF791B1C417B00090407 /* Main.storyboard */,
-				A1FDCF7C1B1C417B00090407 /* Images.xcassets */,
-				A1FDCF7E1B1C417B00090407 /* LaunchScreen.xib */,
-				A1FDCF6F1B1C417B00090407 /* Supporting Files */,
+				28ADAB221C8934EF00C1F2D2 /* Category */,
+				28ADAB2F1C8934EF00C1F2D2 /* Config */,
+				28ADAB321C8934EF00C1F2D2 /* JJSkin.h */,
+				28ADAB331C8934EF00C1F2D2 /* Manager */,
+				28ADAB361C8934EF00C1F2D2 /* Style */,
+				28ADAB531C8934EF00C1F2D2 /* View */,
 			);
 			path = JJSkin;
 			sourceTree = "<group>";
 		};
-		A1FDCF6F1B1C417B00090407 /* Supporting Files */ = {
+		28ADAB221C8934EF00C1F2D2 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				A1FDCF701B1C417B00090407 /* Info.plist */,
-				A1FDCF711B1C417B00090407 /* main.m */,
+				28ADAB231C8934EF00C1F2D2 /* NSData+JJ.h */,
+				28ADAB241C8934EF00C1F2D2 /* NSData+JJ.m */,
+				28ADAB251C8934EF00C1F2D2 /* NSObject+JJ.h */,
+				28ADAB261C8934EF00C1F2D2 /* NSObject+JJ.m */,
+				28ADAB271C8934EF00C1F2D2 /* NSObject+JJSkin.h */,
+				28ADAB281C8934EF00C1F2D2 /* NSObject+JJSkin.m */,
+				28ADAB291C8934EF00C1F2D2 /* NSString+JJ.h */,
+				28ADAB2A1C8934EF00C1F2D2 /* NSString+JJ.m */,
+				28ADAB2B1C8934EF00C1F2D2 /* UIColor+JJ.h */,
+				28ADAB2C1C8934EF00C1F2D2 /* UIColor+JJ.m */,
+				28ADAB2D1C8934EF00C1F2D2 /* UIDevice+JJ.h */,
+				28ADAB2E1C8934EF00C1F2D2 /* UIDevice+JJ.m */,
 			);
-			name = "Supporting Files";
+			path = Category;
 			sourceTree = "<group>";
 		};
-		A1FDCF881B1C417B00090407 /* JJSkinTests */ = {
+		28ADAB2F1C8934EF00C1F2D2 /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				A1FDCF8B1B1C417B00090407 /* JJSkinTests.m */,
-				A1FDCF891B1C417B00090407 /* Supporting Files */,
+				28ADAB301C8934EF00C1F2D2 /* JJSkinConfig.h */,
+				28ADAB311C8934EF00C1F2D2 /* JJSkinConfig.m */,
 			);
-			path = JJSkinTests;
+			path = Config;
 			sourceTree = "<group>";
 		};
-		A1FDCF891B1C417B00090407 /* Supporting Files */ = {
+		28ADAB331C8934EF00C1F2D2 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				A1FDCF8A1B1C417B00090407 /* Info.plist */,
+				28ADAB341C8934EF00C1F2D2 /* JJSkinManager.h */,
+				28ADAB351C8934EF00C1F2D2 /* JJSkinManager.m */,
 			);
-			name = "Supporting Files";
+			path = Manager;
 			sourceTree = "<group>";
 		};
-		A1FDCFD31B1C648D00090407 /* API */ = {
+		28ADAB361C8934EF00C1F2D2 /* Style */ = {
 			isa = PBXGroup;
 			children = (
-				7C4C92941B6BCB0300B1779D /* JJSkin */,
-				7C4C92E61B6BCB0A00B1779D /* JJSkinTest */,
+				28ADAB371C8934EF00C1F2D2 /* JJButtonStyle.h */,
+				28ADAB381C8934EF00C1F2D2 /* JJButtonStyle.m */,
+				28ADAB391C8934EF00C1F2D2 /* JJCommonStyle.h */,
+				28ADAB3A1C8934EF00C1F2D2 /* JJCommonStyle.m */,
+				28ADAB3B1C8934EF00C1F2D2 /* JJControlStyle.h */,
+				28ADAB3C1C8934EF00C1F2D2 /* JJControlStyle.m */,
+				28ADAB3D1C8934EF00C1F2D2 /* JJFontStyle.h */,
+				28ADAB3E1C8934EF00C1F2D2 /* JJFontStyle.m */,
+				28ADAB3F1C8934EF00C1F2D2 /* JJImageViewStyle.h */,
+				28ADAB401C8934EF00C1F2D2 /* JJImageViewStyle.m */,
+				28ADAB411C8934EF00C1F2D2 /* JJLabelStyle.h */,
+				28ADAB421C8934EF00C1F2D2 /* JJLabelStyle.m */,
+				28ADAB431C8934EF00C1F2D2 /* JJMyselfTestStyle.h */,
+				28ADAB441C8934EF00C1F2D2 /* JJMyselfTestStyle.m */,
+				28ADAB451C8934EF00C1F2D2 /* JJScrollViewStyle.h */,
+				28ADAB461C8934EF00C1F2D2 /* JJScrollViewStyle.m */,
+				28ADAB471C8934EF00C1F2D2 /* JJSkinStyle.h */,
+				28ADAB481C8934EF00C1F2D2 /* JJSkinStyle.m */,
+				28ADAB491C8934EF00C1F2D2 /* JJSkinStyleDataSource.h */,
+				28ADAB4A1C8934EF00C1F2D2 /* JJSkinStyleDelegate.h */,
+				28ADAB4B1C8934EF00C1F2D2 /* JJTableViewStyle.h */,
+				28ADAB4C1C8934EF00C1F2D2 /* JJTableViewStyle.m */,
+				28ADAB4D1C8934EF00C1F2D2 /* JJTextFieldStyle.h */,
+				28ADAB4E1C8934EF00C1F2D2 /* JJTextFieldStyle.m */,
+				28ADAB4F1C8934EF00C1F2D2 /* JJTextViewStyle.h */,
+				28ADAB501C8934EF00C1F2D2 /* JJTextViewStyle.m */,
+				28ADAB511C8934EF00C1F2D2 /* JJViewStyle.h */,
+				28ADAB521C8934EF00C1F2D2 /* JJViewStyle.m */,
 			);
-			name = API;
+			path = Style;
+			sourceTree = "<group>";
+		};
+		28ADAB531C8934EF00C1F2D2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				28ADAB541C8934EF00C1F2D2 /* JJSkinHandleDelegate.h */,
+				28ADAB551C8934EF00C1F2D2 /* JJSkinView.h */,
+				28ADAB561C8934EF00C1F2D2 /* JJSkinView.m */,
+				28ADAB571C8934EF00C1F2D2 /* JJSkinViewController.h */,
+				28ADAB581C8934EF00C1F2D2 /* JJSkinViewController.m */,
+				28ADAB591C8934EF00C1F2D2 /* UIView+JJSkin.h */,
+				28ADAB5A1C8934EF00C1F2D2 /* UIView+JJSkin.m */,
+				28ADAB5B1C8934EF00C1F2D2 /* UIViewController+JJSkin.h */,
+				28ADAB5C1C8934EF00C1F2D2 /* UIViewController+JJSkin.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A1FDCF6B1B1C417B00090407 /* JJSkin */ = {
+		28ADAB141C8934B400C1F2D2 /* JJSkin */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A1FDCF8F1B1C417B00090407 /* Build configuration list for PBXNativeTarget "JJSkin" */;
+			buildConfigurationList = 28ADAB1E1C8934B400C1F2D2 /* Build configuration list for PBXNativeTarget "JJSkin" */;
 			buildPhases = (
-				A1FDCF681B1C417B00090407 /* Sources */,
-				A1FDCF691B1C417B00090407 /* Frameworks */,
-				A1FDCF6A1B1C417B00090407 /* Resources */,
+				28ADAB111C8934B400C1F2D2 /* Sources */,
+				28ADAB121C8934B400C1F2D2 /* Frameworks */,
+				28ADAB131C8934B400C1F2D2 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -351,164 +249,77 @@
 			);
 			name = JJSkin;
 			productName = JJSkin;
-			productReference = A1FDCF6C1B1C417B00090407 /* JJSkin.app */;
-			productType = "com.apple.product-type.application";
-		};
-		A1FDCF841B1C417B00090407 /* JJSkinTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A1FDCF921B1C417B00090407 /* Build configuration list for PBXNativeTarget "JJSkinTests" */;
-			buildPhases = (
-				A1FDCF811B1C417B00090407 /* Sources */,
-				A1FDCF821B1C417B00090407 /* Frameworks */,
-				A1FDCF831B1C417B00090407 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A1FDCF871B1C417B00090407 /* PBXTargetDependency */,
-			);
-			name = JJSkinTests;
-			productName = JJSkinTests;
-			productReference = A1FDCF851B1C417B00090407 /* JJSkinTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
+			productReference = 28ADAB151C8934B400C1F2D2 /* libJJSkin.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		A1FDCF641B1C417B00090407 /* Project object */ = {
+		28ADAB0D1C8934B400C1F2D2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
-				ORGANIZATIONNAME = gongjian;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = JJ;
 				TargetAttributes = {
-					A1FDCF6B1B1C417B00090407 = {
-						CreatedOnToolsVersion = 6.3.2;
-					};
-					A1FDCF841B1C417B00090407 = {
-						CreatedOnToolsVersion = 6.3.2;
-						TestTargetID = A1FDCF6B1B1C417B00090407;
+					28ADAB141C8934B400C1F2D2 = {
+						CreatedOnToolsVersion = 7.2.1;
 					};
 				};
 			};
-			buildConfigurationList = A1FDCF671B1C417B00090407 /* Build configuration list for PBXProject "JJSkin" */;
+			buildConfigurationList = 28ADAB101C8934B400C1F2D2 /* Build configuration list for PBXProject "JJSkin" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
 			);
-			mainGroup = A1FDCF631B1C417B00090407;
-			productRefGroup = A1FDCF6D1B1C417B00090407 /* Products */;
+			mainGroup = 28ADAB0C1C8934B400C1F2D2;
+			productRefGroup = 28ADAB161C8934B400C1F2D2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A1FDCF6B1B1C417B00090407 /* JJSkin */,
-				A1FDCF841B1C417B00090407 /* JJSkinTests */,
+				28ADAB141C8934B400C1F2D2 /* JJSkin */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		A1FDCF6A1B1C417B00090407 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A1FDCF7B1B1C417B00090407 /* Main.storyboard in Resources */,
-				A1FDCF801B1C417B00090407 /* LaunchScreen.xib in Resources */,
-				7C4C92F01B6BCB0A00B1779D /* jjSkin-iPhone320x568.json in Resources */,
-				7C4C92EE1B6BCB0A00B1779D /* jjSkin-iPhone 5C.json in Resources */,
-				7C4C92F11B6BCB0A00B1779D /* jjSkin-iPhone375x667.json in Resources */,
-				7C4C92EF1B6BCB0A00B1779D /* jjSkin-iPhone.json in Resources */,
-				A1FDCF7D1B1C417B00090407 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A1FDCF831B1C417B00090407 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		A1FDCF681B1C417B00090407 /* Sources */ = {
+		28ADAB111C8934B400C1F2D2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2828D4041BF7108D00401CC9 /* NSObject+JJSkin.m in Sources */,
-				7C4C92ED1B6BCB0A00B1779D /* JJSkin+Test.m in Sources */,
-				7C4C92D31B6BCB0300B1779D /* JJSkinConfig.m in Sources */,
-				7C4C92DC1B6BCB0300B1779D /* JJScrollViewStyle.m in Sources */,
-				7C4C92DB1B6BCB0300B1779D /* JJMyselfTestStyle.m in Sources */,
-				7C4C92E41B6BCB0300B1779D /* UIView+JJSkin.m in Sources */,
-				7C4C92D11B6BCB0300B1779D /* UIColor+JJ.m in Sources */,
-				7C4C92D41B6BCB0300B1779D /* JJSkinManager.m in Sources */,
-				7C4C92CE1B6BCB0300B1779D /* NSData+JJ.m in Sources */,
-				7C4C92D81B6BCB0300B1779D /* JJFontStyle.m in Sources */,
-				7C4C92E31B6BCB0300B1779D /* JJSkinViewController.m in Sources */,
-				7C4C92D61B6BCB0300B1779D /* JJCommonStyle.m in Sources */,
-				7C4C92D01B6BCB0300B1779D /* NSString+JJ.m in Sources */,
-				7C4C92E01B6BCB0300B1779D /* JJTextViewStyle.m in Sources */,
-				A1FDCF781B1C417B00090407 /* ViewController.m in Sources */,
-				A1FDCF751B1C417B00090407 /* AppDelegate.m in Sources */,
-				7C4C92D21B6BCB0300B1779D /* UIDevice+JJ.m in Sources */,
-				7C4C92CF1B6BCB0300B1779D /* NSObject+JJ.m in Sources */,
-				A1FDCF721B1C417B00090407 /* main.m in Sources */,
-				7C4C92D91B6BCB0300B1779D /* JJImageViewStyle.m in Sources */,
-				7C4C92DD1B6BCB0300B1779D /* JJSkinStyle.m in Sources */,
-				7C4C92D71B6BCB0300B1779D /* JJControlStyle.m in Sources */,
-				7C4C92DE1B6BCB0300B1779D /* JJTableViewStyle.m in Sources */,
-				7C4C92E21B6BCB0300B1779D /* JJSkinView.m in Sources */,
-				7C4C92E51B6BCB0300B1779D /* UIViewController+JJSkin.m in Sources */,
-				7C4C92E11B6BCB0300B1779D /* JJViewStyle.m in Sources */,
-				7C4C92DF1B6BCB0300B1779D /* JJTextFieldStyle.m in Sources */,
-				7C4C92DA1B6BCB0300B1779D /* JJLabelStyle.m in Sources */,
-				7C4C92D51B6BCB0300B1779D /* JJButtonStyle.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A1FDCF811B1C417B00090407 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A1FDCF8C1B1C417B00090407 /* JJSkinTests.m in Sources */,
+				28ADAB5D1C8934EF00C1F2D2 /* NSData+JJ.m in Sources */,
+				28ADAB6D1C8934EF00C1F2D2 /* JJSkinStyle.m in Sources */,
+				28ADAB671C8934EF00C1F2D2 /* JJControlStyle.m in Sources */,
+				28ADAB5E1C8934EF00C1F2D2 /* NSObject+JJ.m in Sources */,
+				28ADAB5F1C8934EF00C1F2D2 /* NSObject+JJSkin.m in Sources */,
+				28ADAB701C8934EF00C1F2D2 /* JJTextViewStyle.m in Sources */,
+				28ADAB621C8934EF00C1F2D2 /* UIDevice+JJ.m in Sources */,
+				28ADAB6F1C8934EF00C1F2D2 /* JJTextFieldStyle.m in Sources */,
+				28ADAB611C8934EF00C1F2D2 /* UIColor+JJ.m in Sources */,
+				28ADAB721C8934EF00C1F2D2 /* JJSkinView.m in Sources */,
+				28ADAB6E1C8934EF00C1F2D2 /* JJTableViewStyle.m in Sources */,
+				28ADAB711C8934EF00C1F2D2 /* JJViewStyle.m in Sources */,
+				28ADAB631C8934EF00C1F2D2 /* JJSkinConfig.m in Sources */,
+				28ADAB691C8934EF00C1F2D2 /* JJImageViewStyle.m in Sources */,
+				28ADAB6A1C8934EF00C1F2D2 /* JJLabelStyle.m in Sources */,
+				28ADAB741C8934EF00C1F2D2 /* UIView+JJSkin.m in Sources */,
+				28ADAB641C8934EF00C1F2D2 /* JJSkinManager.m in Sources */,
+				28ADAB681C8934EF00C1F2D2 /* JJFontStyle.m in Sources */,
+				28ADAB651C8934EF00C1F2D2 /* JJButtonStyle.m in Sources */,
+				28ADAB661C8934EF00C1F2D2 /* JJCommonStyle.m in Sources */,
+				28ADAB6C1C8934EF00C1F2D2 /* JJScrollViewStyle.m in Sources */,
+				28ADAB6B1C8934EF00C1F2D2 /* JJMyselfTestStyle.m in Sources */,
+				28ADAB601C8934EF00C1F2D2 /* NSString+JJ.m in Sources */,
+				28ADAB731C8934EF00C1F2D2 /* JJSkinViewController.m in Sources */,
+				28ADAB751C8934EF00C1F2D2 /* UIViewController+JJSkin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		A1FDCF871B1C417B00090407 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A1FDCF6B1B1C417B00090407 /* JJSkin */;
-			targetProxy = A1FDCF861B1C417B00090407 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		A1FDCF791B1C417B00090407 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A1FDCF7A1B1C417B00090407 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		A1FDCF7E1B1C417B00090407 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A1FDCF7F1B1C417B00090407 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		A1FDCF8D1B1C417B00090407 /* Debug */ = {
+		28ADAB1C1C8934B400C1F2D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -527,8 +338,9 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -537,22 +349,20 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		A1FDCF8E1B1C417B00090407 /* Release */ = {
+		28ADAB1D1C8934B400C1F2D2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -582,99 +392,53 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		A1FDCF901B1C417B00090407 /* Debug */ = {
+		28ADAB1F1C8934B400C1F2D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = JJSkin/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
-		A1FDCF911B1C417B00090407 /* Release */ = {
+		28ADAB201C8934B400C1F2D2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = JJSkin/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		A1FDCF931B1C417B00090407 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = JJSkinTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JJSkin.app/JJSkin";
-			};
-			name = Debug;
-		};
-		A1FDCF941B1C417B00090407 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = JJSkinTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JJSkin.app/JJSkin";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A1FDCF671B1C417B00090407 /* Build configuration list for PBXProject "JJSkin" */ = {
+		28ADAB101C8934B400C1F2D2 /* Build configuration list for PBXProject "JJSkin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A1FDCF8D1B1C417B00090407 /* Debug */,
-				A1FDCF8E1B1C417B00090407 /* Release */,
+				28ADAB1C1C8934B400C1F2D2 /* Debug */,
+				28ADAB1D1C8934B400C1F2D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A1FDCF8F1B1C417B00090407 /* Build configuration list for PBXNativeTarget "JJSkin" */ = {
+		28ADAB1E1C8934B400C1F2D2 /* Build configuration list for PBXNativeTarget "JJSkin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A1FDCF901B1C417B00090407 /* Debug */,
-				A1FDCF911B1C417B00090407 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A1FDCF921B1C417B00090407 /* Build configuration list for PBXNativeTarget "JJSkinTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A1FDCF931B1C417B00090407 /* Debug */,
-				A1FDCF941B1C417B00090407 /* Release */,
+				28ADAB1F1C8934B400C1F2D2 /* Debug */,
+				28ADAB201C8934B400C1F2D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = A1FDCF641B1C417B00090407 /* Project object */;
+	rootObject = 28ADAB0D1C8934B400C1F2D2 /* Project object */;
 }
