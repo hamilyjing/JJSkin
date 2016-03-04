@@ -93,7 +93,6 @@
 
 - (NSString *)jj_base64EncodedString
 {
-#warning - parameter right?
     NSString *base64EncodedString = [[self jj_data] base64EncodedStringWithOptions:0];
     return base64EncodedString;
 }
