@@ -16,6 +16,8 @@
 #include <net/if_dl.h>
 #import <CoreTelephony/CTTelephonyNetworkInfo.h>
 #import <CoreTelephony/CTCarrier.h>
+#import <ifaddrs.h>
+#import <arpa/inet.h>
 
 @implementation UIDevice (JJ)
 
@@ -134,6 +136,8 @@
     if ([hardware isEqualToString:@"iPhone8,2"])    return IPHONE_6S_PLUS;
     if ([hardware isEqualToString:@"iPhone8,1"])    return IPHONE_6S;
     
+    if ([hardware isEqualToString:@"iPhone8,4"])    return IPHONE_SE;
+    
     if ([hardware isEqualToString:@"iPhone7,1"])    return IPHONE_6_PLUS;
     if ([hardware isEqualToString:@"iPhone7,2"])    return IPHONE_6;
     
@@ -168,11 +172,11 @@
     if ([hardware isEqualToString:@"iPad4,8"])      return IPAD_MINI_3_WIFI_CELLULAR;
     if ([hardware isEqualToString:@"iPad5,3"])      return IPAD_AIR_2_WIFI;
     if ([hardware isEqualToString:@"iPad5,4"])      return IPAD_AIR_2_WIFI_CELLULAR;
-    if ([hardware isEqualToString:@"i386"])         return SIMULATOR;
-    if ([hardware isEqualToString:@"x86_64"])       return SIMULATOR;
-    if ([hardware hasPrefix:@"iPhone"])             return SIMULATOR;
-    if ([hardware hasPrefix:@"iPod"])               return SIMULATOR;
-    if ([hardware hasPrefix:@"iPad"])               return SIMULATOR;
+    if ([hardware isEqualToString:@"i386"])         return IOS_SIMULATOR;
+    if ([hardware isEqualToString:@"x86_64"])       return IOS_SIMULATOR;
+    if ([hardware hasPrefix:@"iPhone"])             return IOS_SIMULATOR;
+    if ([hardware hasPrefix:@"iPod"])               return IOS_SIMULATOR;
+    if ([hardware hasPrefix:@"iPad"])               return IOS_SIMULATOR;
     
     return NOT_AVAILABLE;
 }
@@ -194,8 +198,9 @@
         case IPHONE_5S_CDMA_GSM:                return 6.2f;
         case IPHONE_6_PLUS:                     return 7.1f;
         case IPHONE_6:                          return 7.2f;
-        case IPHONE_6S_PLUS:                     return 8.2f;
-        case IPHONE_6S:                          return 8.1f;
+        case IPHONE_6S_PLUS:                    return 8.2f;
+        case IPHONE_6S:                         return 8.1f;
+        case IPHONE_SE:                         return 8.4f;
             
         case IPOD_TOUCH_1G:                     return 1.1f;
         case IPOD_TOUCH_2G:                     return 2.1f;
@@ -231,7 +236,7 @@
         case IPAD_MINI_RETINA_WIFI_CELLULAR_CN: return 4.8f;
             
             
-        case SIMULATOR:                         return 100.0f;
+        case IOS_SIMULATOR:                         return 100.0f;
         case NOT_AVAILABLE:                     return 200.0f;
     }
     return 200.0f; //Device is not available
@@ -295,8 +300,8 @@
     if ([hardware isEqualToString:@"iPad5,3"])      return @"iPad Air 2 (Wi-Fi)";
     if ([hardware isEqualToString:@"iPad5,4"])      return @"iPad Air 2 (Wi-Fi + Cellular)";
     
-    if ([hardware isEqualToString:@"i386"])         return @"Simulator";
-    if ([hardware isEqualToString:@"x86_64"])       return @"Simulator";
+    if ([hardware isEqualToString:@"i386"])         return @"iOS_Simulator";
+    if ([hardware isEqualToString:@"x86_64"])       return @"iOS_Simulator";
     if ([hardware hasPrefix:@"iPhone"])             return @"iPhone";
     if ([hardware hasPrefix:@"iPod"])               return @"iPod";
     if ([hardware hasPrefix:@"iPad"])               return @"iPad";
@@ -357,8 +362,8 @@
     if ([hardware isEqualToString:@"iPad5,3"])      return @"iPad Air 2";
     if ([hardware isEqualToString:@"iPad5,4"])      return @"iPad Air 2";
     
-    if ([hardware isEqualToString:@"i386"])         return @"Simulator";
-    if ([hardware isEqualToString:@"x86_64"])       return @"Simulator";
+    if ([hardware isEqualToString:@"i386"])         return @"iOS_Simulator";
+    if ([hardware isEqualToString:@"x86_64"])       return @"iOS_Simulator";
     if ([hardware hasPrefix:@"iPhone"])             return @"iPhone";
     if ([hardware hasPrefix:@"iPod"])               return @"iPod";
     if ([hardware hasPrefix:@"iPad"])               return @"iPad";
@@ -450,10 +455,13 @@
         case IPHONE_5_CDMA_GSM:
         case IPHONE_5C:
         case IPHONE_5C_CDMA_GSM:
+        case IPHONE_5S:
+        case IPHONE_5S_CDMA_GSM:
         case IPHONE_6:
         case IPHONE_6_PLUS:
         case IPHONE_6S:
         case IPHONE_6S_PLUS:
+        case IPHONE_SE:
             return CGSizeMake(3264, 2448);
             break;
             

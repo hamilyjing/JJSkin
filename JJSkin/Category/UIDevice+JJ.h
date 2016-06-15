@@ -28,6 +28,7 @@ typedef NS_ENUM(NSUInteger, JJHardware)
     IPHONE_6,
     IPHONE_6S_PLUS,
     IPHONE_6S,
+    IPHONE_SE,
     
     IPOD_TOUCH_1G,
     IPOD_TOUCH_2G,
@@ -62,7 +63,7 @@ typedef NS_ENUM(NSUInteger, JJHardware)
     IPAD_AIR_2_WIFI,
     IPAD_AIR_2_WIFI_CELLULAR,
     
-    SIMULATOR
+    IOS_SIMULATOR
 };
 
 @interface UIDevice (JJ)
