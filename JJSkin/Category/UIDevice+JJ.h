@@ -29,6 +29,8 @@ typedef NS_ENUM(NSUInteger, JJHardware)
     IPHONE_6S_PLUS,
     IPHONE_6S,
     IPHONE_SE,
+    IPHONE_7_PLUS,
+    IPHONE_7,
     
     IPOD_TOUCH_1G,
     IPOD_TOUCH_2G,
@@ -103,6 +105,8 @@ typedef NS_ENUM(NSUInteger, JJHardware)
 + (NSString *)jj_systemVersion; // iOS8.0
 
 + (NSString *)jj_macAddress; // 获取MAC地址，大写，"3C075417B5C6"
+
++ (NSString *)jj_IPAdress;
 
 /** This method returns the resolution for still image that can be received
  from back camera of the current device. Resolution returned for image oriented landscape right. **/
