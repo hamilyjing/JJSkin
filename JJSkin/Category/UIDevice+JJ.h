@@ -140,6 +140,8 @@ typedef NS_ENUM(NSUInteger, JJHardware)
 
 #pragma mark - Screen
 
++ (BOOL)jj_isZoom;
+
 // 弥补iPhone 6及以后设备中的“设置”->“显示与亮度”->"显示模式"对[UIScreen mainScreen].bounds.size的影响
 + (CGSize)jj_screenSizeIgnoreDisplayZoom;
 

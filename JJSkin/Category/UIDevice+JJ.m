@@ -649,6 +649,19 @@
 
 #pragma mark - Screen
 
++ (BOOL)jj_isZoom
+{
+    if (3 == (NSInteger)(round([UIScreen mainScreen].scale)))
+    {
+        // Plus-sized
+        return [UIScreen mainScreen].nativeScale > 2.7;
+    }
+    else
+    {
+        return [UIScreen mainScreen].nativeScale > [UIScreen mainScreen].scale;
+    }
+}
+
 + (CGSize)jj_screenSizeIgnoreDisplayZoom
 {
     CGSize screenSize = [UIScreen mainScreen].bounds.size;
@@ -662,6 +675,13 @@
     else if (IPHONE_6_PLUS == hardware || IPHONE_6S_PLUS == hardware || IPHONE_7_PLUS == hardware)
     {
         screenSize= CGSizeMake(414, 736);
+    }
+    
+    if ([self jj_isZoom])
+    {
+        CGSize size = [UIScreen mainScreen].nativeBounds.size;
+        screenSize.width = size.width / [UIScreen mainScreen].scale;
+        screenSize.height = size.height / [UIScreen mainScreen].scale;
     }
     
     return screenSize;
